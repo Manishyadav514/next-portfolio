@@ -1,6 +1,6 @@
 import styles from "../styles/Header.module.css";
 import React, { useState, useEffect } from "react";
-// import { FaBars, FaWindowClose } from "react-icons/fa";
+import { FaBars, FaWindowClose } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -48,7 +48,7 @@ export const Header1 = () => {
         <a className={styles.navbar_title}>AwarenessHall</a>
       </Link>
       <div className={styles.navbar_toggle} onClick={toggle}>
-        {/* <FaBars color="white" /> */}
+        <FaBars color="white" />
       </div>
       <div className={styles.navbar_links}>
         <div className={styles.navbar_link}>
@@ -73,7 +73,7 @@ export const Header1 = () => {
         className={isOpen ? styles.navbar_sidebar : styles.navbar_sidebar_open}
       >
         <div className={styles.navbar_sidebar_toggle} onClick={toggle}>
-          {/* <FaWindowClose color="#fff" /> */}
+          <FaWindowClose color="#fff" />
         </div>
         <div className={styles.navbar_sidebar_links} onClick={toggle}>
           <Link href="/about">

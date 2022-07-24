@@ -3,13 +3,13 @@ import React from "react";
 import styles from "../styles/SliderBackground.module.css";
 // import Video from "../public/bg-video.mp4";
 import Link from "next/link";
-// import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { BsFacebook, BsInstagram } from "react-icons/bs";
 
-// import {
-//   AiFillFacebook,
-//   AiOutlineFacebook,
-//   AiOutlineMail,
-// } from "react-icons/Ai";
+import {
+  AiFillFacebook,
+  AiOutlineFacebook,
+  AiOutlineMail,
+} from "react-icons/Ai";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
@@ -74,18 +74,18 @@ const DownloadedHeader = () => {
         <div className={styles.media_icons}>
           <Link href="/">
             <a>
-              {/* <FaFacebookMessenger style={{ color: "cyan" }} /> */}
+              <FaFacebookMessenger style={{ color: "cyan" }} />
             </a>
           </Link>
           <Link href="mailto:manish.yadav.elit@gmail.com">
             <a>
-              {/* <HiOutlineMail style={{ color: "#EA4335" }} /> */}
+              <HiOutlineMail style={{ color: "#EA4335" }} />
             </a>
           </Link>
 
           <Link href="https://www.instagram.com/awareness_hall/">
             <a>
-              {/* <BsInstagram style={{ color: "#DE6666" }} /> */}
+              <BsInstagram style={{ color: "#DE6666" }} />
             </a>
           </Link>
         </div>

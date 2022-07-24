@@ -18,8 +18,9 @@ export default function Home() {
       </Head>
 
       <div>
-        <Banner2/>
-        {/* <SliderBackground /> */}
+
+        <SliderBackground />
+                <Banner2/>
         <HomeCard {...homeObjOne} />
         <HomeCard {...homeObjTwo} />
         <HomeCard {...homeObjThree} />
