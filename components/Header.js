@@ -18,32 +18,32 @@ export const Header1 = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   // console.log(scrollPosition)
 
-  const Scroll = (scrollPosition) => {
-    if (scrollPosition >= 80) {
-      document.getElementById("navbar").style.position = "sticky";
-      document.getElementById("navbar").style.background = "transparent";
-    } else if (scrollPosition >= 280) {
-      document.getElementById("navbar").style.position = "none";
-      document.getElementById("navbar").style.background = "#232a34";
-    } else {
-      document.getElementById("navbar").style.position = "none";
-      document.getElementById("navbar").style.background = "#232a34";
-    }
-  };
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    Scroll(position);
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // const Scroll = (scrollPosition) => {
+  //   if (scrollPosition >= 80) {
+  //     document.getElementById("navbar").style.position = "sticky";
+  //     document.getElementById("navbar").style.background = "transparent";
+  //   } else if (scrollPosition >= 280) {
+  //     document.getElementById("navbar").style.position = "none";
+  //     document.getElementById("navbar").style.background = "#232a34";
+  //   } else {
+  //     document.getElementById("navbar").style.position = "none";
+  //     document.getElementById("navbar").style.background = "#232a34";
+  //   }
+  // };
+  // const handleScroll = () => {
+  //   const position = window.pageYOffset;
+  //   Scroll(position);
+  // };
+  // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll, { passive: true });
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // });
 
   return (
     <div className={styles.navbar} id="navbar">
-      <Image width="50" height="50" src="/lg2.png" alt="logo" />
+      <Image width={50} height={50} quality={100} src="/lg2.png" alt="logo" />
       <Link href="/">
         <a className={styles.navbar_title}>AwarenessHall</a>
       </Link>
