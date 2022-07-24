@@ -3,7 +3,7 @@
 import camera1 from "../public/camera1.svg";
 
 export const homeObjOne = {
-    id: 'about',
+    id: 'contact',
     lightBg: false,
     lightText: false,
     lightTextDesc: true,
@@ -23,7 +23,7 @@ export const homeObjOne = {
     svgSrc: "/resume.svg"
 }
 export const homeObjTwo = {
-    id: 'about',
+    id: 'abut',
     lightBg: true,
     lightText: false,
     lightTextDesc: true,
@@ -43,7 +43,7 @@ export const homeObjTwo = {
     svgSrc: "/car.svg"
 }
 export const homeObjThree = {
-    id: 'about',
+    id: 'aboutas',
     lightBg: false,
     lightText: false,
     lightTextDesc: true,
