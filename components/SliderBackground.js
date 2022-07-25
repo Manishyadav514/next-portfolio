@@ -4,12 +4,6 @@ import styles from "../styles/SliderBackground.module.css";
 // import Video from "../public/bg-video.mp4";
 import Link from "next/link";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
-
-import {
-  AiFillFacebook,
-  AiOutlineFacebook,
-  AiOutlineMail,
-} from "react-icons/Ai";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
