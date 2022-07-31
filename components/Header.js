@@ -43,10 +43,12 @@ export const Header1 = () => {
 
   return (
     <div className={styles.navbar} id="navbar">
-      <Image width={50} height={50} quality={100} src="/lg2.png" alt="logo" />
-      <Link href="/">
-        <a className={styles.navbar_title}>AwarenessHall</a>
-      </Link>
+      <div className={styles.navbar_titlelogo}>
+        <Image width={50} height={50} quality={100} src="/lg2.png" alt="logo" />
+        <Link href="/">
+          <a className={styles.navbar_title}>FoxArchive</a>
+        </Link>
+      </div>
       <div className={styles.navbar_toggle} onClick={toggle}>
         <FaBars color="white" />
       </div>
@@ -55,16 +57,16 @@ export const Header1 = () => {
           <Link href="/">
             <a>Home</a>
           </Link>
-          <Link href="#about">
+          <Link href="/poem">
+            <a>Poetry</a>
+          </Link>
+          <Link href="/photography">
+            <a>Photography</a>
+          </Link>
+          <Link href="/about">
             <a>About</a>
           </Link>
-          <Link href="#javascript">
-            <a>JS</a>
-          </Link>
-          <Link href="#css">
-            <a>CSS</a>
-          </Link>
-          <Link href="#contact">
+          <Link href="/contact">
             <a>Contact</a>
           </Link>
         </div>
