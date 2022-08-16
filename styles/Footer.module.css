@@ -1,11 +1,11 @@
 .footer {
-    background: hsl(209, 61%, 16%);
-    padding: 5rem 1rem;
-  }
-  .footer p {
-    color: #fff;
-    text-align: center;
-    text-transform: capitalize;
-    
-    margin-bottom: 0;
-  }
+  background: #232a34;
+  padding: 5rem 1rem;
+}
+.footer p {
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+
+  margin-bottom: 0;
+}
