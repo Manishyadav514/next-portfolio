@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import React from "react";
-import { Banner1, Banner2,TailwindBanner } from "../components/Banner";
+import { Banner1, Banner2, Banner3 } from "../components/Banner";
 import HomeCard from "../components/HomeCard.js";
 import {
   homeObjOne,
@@ -29,7 +29,8 @@ export default function Home() {
       <div>
         <Banner1/>
         {/* <Banner2 /> */}
-        <TailwindBanner/>
+        {/* <Banner3 /> */}
+        {/* <TailwindBanner/> */}
         <HomeCard {...homeObjOne} />
         <HomeCard {...homeObjTwo} />
         <HomeCard {...homeObjThree} />
