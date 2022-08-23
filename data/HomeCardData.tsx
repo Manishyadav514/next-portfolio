@@ -7,13 +7,12 @@ interface HomeCardData {
   title: string;
   description: string;
   imgStart: boolean;
-  imgSrc: string;
   altText: string;
   dark: true;
   dark2: true;
   primary: true;
   darkText: false;
-  svgSrc: string;
+  imageSrc: string;
   iFrame: string;
   links: Array<{
     status?: boolean;
@@ -22,23 +21,22 @@ interface HomeCardData {
     direct?: string;
   }>;
 }
-export const homeObjOne: HomeCardData = {
+export const homeObjSix: HomeCardData = {
   id: "",
   lightBg: false,
   lightText: false,
   lightTextDesc: true,
-  topLine: "2020-2022",
+  topLine: "2021-2022",
   title: "React.js / Next.js Project",
   description:
     "In the course of of my academic period, I have built some real life React projects using create-react-app or Next.js.",
   imgStart: false,
-  imgSrc: "/road.svg",
   altText: "Car",
   dark: true,
   dark2: true,
   primary: true,
   darkText: false,
-  svgSrc: "/homeCard/bgp_react.svg",
+  imageSrc: "/homeCard/bgp_react.svg",
   iFrame: "",
   links: [
     {
@@ -62,14 +60,13 @@ export const homeObjFour: HomeCardData = {
   title: "Photography/Video",
   description: "Collection of my photos, vector, posters, videos and many more",
   imgStart: true,
-  imgSrc: "/photography.jpg",
   // imageSrc: require('../media/photography.jpg'),
   altText: "Car",
   dark: true,
   dark2: true,
   primary: true,
   darkText: false,
-  svgSrc: "/homeCard/bgp_camera.svg",
+  imageSrc: "/homeCard/bgp_camera.svg",
   iFrame: "",
   links: [    {
     id: 1,
@@ -78,22 +75,21 @@ export const homeObjFour: HomeCardData = {
   }],
 };
 export const homeObjTwo: HomeCardData = {
-  id: "abut",
+  id: "about",
   lightBg: true,
   lightText: false,
   lightTextDesc: true,
-  topLine: "Click to CheckOut!",
+  topLine: "Poem Collection",
   title: "Alfaaz-e-Sukhan",
-  description: "Collection of my poems",
+  description: "Emotions can make people extremely vulnerable. My personal philosophy to overcome emotions is to express them in some form. That's why I express my feelings, emotions via my poems. ",
   imgStart: true,
-  imgSrc: "/bg-video.mp4",
   // imageSrc: require('../media/photography.jpg'),
   altText: "Car",
   dark: true,
   dark2: true,
   primary: true,
   darkText: false,
-  svgSrc: "/homeCard/bgp_car.svg",
+  imageSrc: "/homeCard/bgp_car.svg",
   iFrame: "",
   links: [
     {
@@ -109,18 +105,17 @@ export const homeObjThree: HomeCardData = {
   lightBg: true,
   lightText: false,
   lightTextDesc: true,
-  topLine: "Click to CheckOut!",
+  topLine: "Static Website",
   title: "Html-Css-Js",
   description:
     "This is my static website which contains some of my CSS and Javascript components",
   imgStart: false,
-  imgSrc: "/bg-video.mp4",
   altText: "Car",
   dark: true,
   dark2: true,
   primary: true,
   darkText: false,
-  svgSrc: "/car.svg",
+  imageSrc: "/homeCard/html-css-js.jpeg",
   iFrame: "https://html-css-js-iota.vercel.app/index.html",
   links: [
     {
@@ -132,28 +127,53 @@ export const homeObjThree: HomeCardData = {
 };
 
 export const homeObjFive: HomeCardData = {
-  id: "HTML-CSS-JS",
+  id: "netflix-clone",
   lightBg: true,
   lightText: false,
   lightTextDesc: true,
-  topLine: "Click to CheckOut!",
+  topLine: "React Website",
   title: "Netflix Clone",
   description:
-    "This is my static website which contains some of my CSS and Javascript components",
+    "Netflix clone build using React and REST api.",
   imgStart: false,
-  imgSrc: "/bg-video.mp4",
   altText: "Car",
   dark: true,
   dark2: true,
   primary: true,
   darkText: false,
-  svgSrc: "/car.svg",
+  imageSrc: "/homeCard/netflix.png",
   iFrame: "https://react-netflix-clone-6fa02.web.app/",
   links: [
     {
       id: 1,
       title: "Go to Netflix Clone",
       direct: "https://react-netflix-clone-6fa02.web.app/",
+    }
+  ],
+};
+
+export const homeObjOne: HomeCardData = {
+  id: "amazon-clone",
+  lightBg: true,
+  lightText: false,
+  lightTextDesc: true,
+  topLine: "React Website",
+  title: "Amazon Clone",
+  description:
+    "Fully responsive Amazon clone build using React. Has implemented sorting, search, add to wish list, add to bag features. I tried to make it as similar as real Amazon website",
+  imgStart: false,
+  altText: "Car",
+  dark: true,
+  dark2: true,
+  primary: true,
+  darkText: false,
+  imageSrc: "/homeCard/amazon.png",
+  iFrame: "https://react-website-amazon-clone.vercel.app/",
+  links: [
+    {
+      id: 1,
+      title: "Go to Amazon Clone",
+      direct: "https://react-website-amazon-clone.vercel.app/",
     }
   ],
 };

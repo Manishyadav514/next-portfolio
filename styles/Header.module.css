@@ -9,7 +9,7 @@
   align-items: center;
   padding: 15px 200px;
   transition: 0.5s ease;
-  background: #2184a7;
+  background: #232A34;
   /* background: transparent; */
   /* position: absolute; */
 }
@@ -192,17 +192,17 @@
   margin-bottom: 30px;
 }
 .navbar_sidebar_button > a {
-  border-radius: 20px;
+  border-radius: 15px;
   background: #01bf71;
   white-space: nowrap;
-  padding: 16px 4px;
+  padding: 8px 4px;
   color: #010606;
   font-size: 16px;
   outline: none;
   cursor: pointer;
-  transition: 0.2 ease-in-out;
   text-decoration: none;
-  width: 80px;
+  transition: 0.2s ease-in-out;
+  width: 125px;
   text-align: center;
 }
 .navbar_sidebar_button > a:hover {

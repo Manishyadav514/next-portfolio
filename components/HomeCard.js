@@ -26,13 +26,13 @@ const HomeCard = (props) => {
                 <div className={styles.card_button}>
                   {props.dark ? (
                     <Link href={props.links[0]?.direct}>
-                      <a>
+                      <a target="_blank" rel="noopener noreferrer">
                         <ButtonWhite title={props.links[0]?.title} />
                       </a>
                     </Link>
                   ) : (
                     <Link href={props.links[0]?.direct}>
-                      <a >
+                      <a target="_blank" rel="noopener noreferrer">
                         <ButtonBlack title={props.links[0]?.title} />
                       </a>
                     </Link>
@@ -58,16 +58,27 @@ const HomeCard = (props) => {
         </div>
         <div className={styles.card_col2}>
           <div className={styles.image_box}>
-            <div className={styles.image_inner}>
+            <div className={styles.image_iframe}>
               {props.iFrame ? (
-                <iframe
-                  src={props.iFrame}
-                  className={styles.iFrame}
-                  frameBorder="0"
-                ></iframe>
+                <>
+                  <iframe
+                    src={props?.iFrame}
+                    className={styles.iFrame}
+                    frameBorder="0"
+                  ></iframe>
+                  <div className={styles.homeCard_image}>
+                    <Image
+                      src={props.imageSrc}
+                      width={400}
+                      height={400}
+                      layout="intrinsic"
+                      alt={props.altbox}
+                    />
+                  </div>
+                </>
               ) : (
                 <Image
-                  src={props.svgSrc}
+                  src={props.imageSrc}
                   width={400}
                   height={400}
                   alt={props.altbox}

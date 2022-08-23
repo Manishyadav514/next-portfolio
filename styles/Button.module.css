@@ -4,12 +4,10 @@
     color: #222;
     border-color: #222;
     border-radius: 0;
-    padding: 0.5rem 1rem;
     min-width: 70px;
-    height: 30px;
     text-transform: uppercase;
     background: transparent;
-    padding: 0.375rem 0.75rem;
+    padding: 5px 8px;
     display: inline-block;
     transition: all 0.3s linear;
     font-size: 0.875rem;
@@ -27,14 +25,10 @@
   .btn_white {
     color: #fff;
     border-color: #fff;
-    border-radius: 0;
-    padding: 0.5rem 1rem;
   }
   .btn_black {
     color: #222;
     border-color: #222;
-    border-radius: 0;
-    padding: 0.5rem 1rem;
   }
   .btn_black:hover {
     color: #fff;

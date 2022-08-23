@@ -11,6 +11,7 @@ import {
   homeObjFour,
   homeObjFive,
   CardData,
+  homeObjSix
 } from "../data/HomeCardData.tsx";
 
 export default function Home() {
@@ -31,11 +32,12 @@ export default function Home() {
         {/* <Banner2 /> */}
         {/* <Banner3 /> */}
         {/* <TailwindBanner/> */}
-        <HomeCard {...homeObjOne} />
-        <HomeCard {...homeObjTwo} />
-        <HomeCard {...homeObjThree} />
-        <HomeCard {...homeObjFour} />
-        <HomeCard {...homeObjFive} />
+        <HomeCard id="1" {...homeObjOne} />
+        <HomeCard id="2" {...homeObjTwo} />
+        <HomeCard id="3" {...homeObjThree} />
+        <HomeCard id="4" {...homeObjFour} />
+        <HomeCard id="5" {...homeObjFive} />
+        <HomeCard id="6" {...homeObjSix} />
       </div>
     </div>
   );

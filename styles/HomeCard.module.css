@@ -64,7 +64,7 @@
   max-width: 600px;
   height: 50%;
 }
-.image_inner{
+.image_iframe{
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
@@ -72,6 +72,9 @@
 .iFrame{
   width: 600px;
   height: 320px;
+}
+.homeCard_image{
+  display:none;
 }
 .homeCardLinks a{
   position: relative;
@@ -125,7 +128,10 @@
 }
 @media screen and (max-width: 1000px) {
   .iFrame{
-    width: 400px;
+    display: none;
+  }
+  .homeCard_image{
+    display:block;
   }
 }
 @media screen and (max-width: 768px) {
@@ -141,14 +147,6 @@
     }
     .card_heading {
       font-size: 32px;
-    }
-    .iFrame{
-      width: 450px;
-    }
-  }
-  @media screen and (max-width: 450px) {
-    .iFrame{
-      width: 100%;
     }
   }
 

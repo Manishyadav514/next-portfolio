@@ -44,7 +44,7 @@ export const Header1 = () => {
   return (
     <div className={styles.navbar} id="navbar">
       <div className={styles.navbar_titlelogo}>
-        <Image width={50} height={50} quality={100} src="/lg2.png" alt="logo" />
+        <Image width={30} height={40} quality={100} src="/logo.png" alt="logo" />
         <Link href="/">
           <a className={styles.navbar_title}>FoxArchive</a>
         </Link>

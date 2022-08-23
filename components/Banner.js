@@ -11,53 +11,41 @@ export const Banner1 = () => {
   return (
     <>
       <div className={styles.banner1_container}>
-        <div className={styles.banner1_containerImageVideo}>
           <div className={styles.banner1_containerImage}>
-            <Image
-            alt="banner"
-            width="100%"
-            height="100"
-            layout="fill"
-            src="/background/bg_3.png"
-          />
+            <Image alt="banner" layout="fill" src="/background/bg_2.png" />
           </div>
           <div className={styles.banner1_containerVideo}>
-            <video
-              src="/background/bg_1.mp4"
-              autoPlay
-              muted
-              loop
-            ></video>
+            <video src="/video/video_1.mp4" autoPlay muted loop></video>
           </div>
-        </div>
         <div className={`${styles["banner1_content"]}`}>
-          <h1>
-            Fox<span>Archive</span>
-          </h1>
-          <p>
-            FoxArchive is projects collection of a Javascript developer at a
-            Mumbai based firm. Explore real world projects including few things
-            that he is most passionate about. He believes in supremacy of having
-            multiple solution for a particular problem.
-          </p>
-          <Link href="/about">
-            <a>Read More</a>
-          </Link>
+          <div className={styles.banner1_containerImage}>
+            <h1>
+              Fox<span>Archive</span>
+            </h1>
+            <p>
+              FoxArchive is a project collections of a Javascript developer based
+              out of Mumbai. Explore real world projects including few things
+              that he is most passionate about. He believes in supremacy of
+              having multiple solution for a particular problem.
+            </p>
+            <Link href="/about">
+              <a>Read More</a>
+            </Link>
+          </div>
         </div>
         <div className={styles.banner1_icons}>
           <Link href="/">
-            <a>
-              <FaFacebookMessenger style={{ color: "cyan" }} />
+            <a target="_blank" rel="noopener noreferrer">
+              <FaFacebookMessenger style={{ color: "#448AFF" }} />
             </a>
           </Link>
-          <Link href="mailto:manish.yadav.elit@gmail.com">
+          <Link href="/">
             <a>
               <HiOutlineMail style={{ color: "#EA4335" }} />
             </a>
           </Link>
-
           <Link href="https://www.instagram.com/awareness_hall/">
-            <a>
+            <a target="_blank" rel="noopener noreferrer">
               <BsInstagram style={{ color: "#DE6666" }} />
             </a>
           </Link>
@@ -138,18 +126,18 @@ export const Banner3 = () => {
           </div>
           <div className={styles.banner3_icons}>
             <Link href="/">
-              <a>
+              <a target="_blank" rel="noopener noreferrer">
                 <FaFacebookMessenger style={{ color: "cyan" }} />
               </a>
             </Link>
             <Link href="mailto:manish.yadav.elit@gmail.com">
-              <a>
+              <a target="_blank" rel="noopener noreferrer">
                 <HiOutlineMail style={{ color: "#EA4335" }} />
               </a>
             </Link>
 
             <Link href="https://www.instagram.com/awareness_hall/">
-              <a>
+              <a target="_blank" rel="noopener noreferrer">
                 <BsInstagram style={{ color: "#DE6666" }} />
               </a>
             </Link>

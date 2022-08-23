@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "../styles/Footer.module.css";
 import Link from "next/link";
+
 const Footer = () => {
   return (
     <>
@@ -21,28 +21,80 @@ const Footer = () => {
           <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-large text-gray-100 tracking-widest text-md mb-3 uppercase">
-                Dynamic/Static Website
+                Website
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer ">
-                    Amazon Clone
-                  </a>
+                  <Link href="https://react-website-amazon-clone.vercel.app/">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-50 hover:text-teal-200 cursor-pointer"
+                    >
+                      Amazon Clone
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    Netflix Clone
-                  </a>
+                  <Link href="https://react-netflix-clone-6fa02.web.app/">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-50 hover:text-teal-200 cursor-pointer"
+                    >
+                      Netflix Clone
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    React shopping Cart
-                  </a>
+                  <Link href="https://react-shopping-cart-7f4fc.web.app/">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-50 hover:text-teal-200 cursor-pointer"
+                    >
+                      React Shopping Cart
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    HTML-CSS-JS Project
-                  </a>
+                  <Link href="https://html-css-js-iota.vercel.app/index.html">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-50 hover:text-teal-200 cursor-pointer"
+                    >
+                      HTML-CSS-JS Project
+                    </a>
+                  </Link>
+                </li>
+              </nav>
+            </div>
+            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 className="title-font font-medium text-gray-100 tracking-widest text-md mb-3 uppercase">
+                Passion
+              </h2>
+              <nav className="list-none mb-10">
+                <li>
+                  <Link href="/poem">
+                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
+                      Poetry
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/photography#photo">
+                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
+                      Photography
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/photography#design">
+                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
+                      Photoshop
+                    </a>
+                  </Link>
                 </li>
               </nav>
             </div>
@@ -52,78 +104,67 @@ const Footer = () => {
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    First Link
-                  </a>
+                  <Link href="">
+                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
+                      First Link
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    Second Link
-                  </a>
+                  <Link href="">
+                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
+                      Second Link
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    Third Link
-                  </a>
+                  <Link href="">
+                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
+                      Third Link
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    Fourth Link
-                  </a>
-                </li>
-              </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-100 tracking-widest text-md mb-3 uppercase">
-                CATEGORIES
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    First Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    Second Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    Third Link
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    Fourth Link
-                  </a>
+                  <Link href="">
+                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
+                      Fourth Link
+                    </a>
+                  </Link>
                 </li>
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-gray-100 tracking-widest text-md mb-3 uppercase">
-                CATEGORIES
+                Connect With Us
               </h2>
               <nav className="list-none mb-10">
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    First Link
-                  </a>
+                  <Link href="">
+                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
+                      About Us
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    Second Link
-                  </a>
+                  <Link href="">
+                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
+                      Contact Us
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    Third Link
-                  </a>
+                  <Link href="">
+                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
+                      Instagram
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                    Fourth Link
-                  </a>
+                  <Link href="">
+                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
+                      manish.yadav.elit@gmail.com
+                    </a>
+                  </Link>
                 </li>
               </nav>
             </div>
@@ -131,16 +172,9 @@ const Footer = () => {
         </div>
         <div className="bg-073d52">
           <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row justify-center align-middle">
-            <p className="text-teal-200 text-sm text-center sm:text-left">
+            <p className="text-teal-200 text-sm text-center cursor-pointer sm:text-left">
               © 2022 FoxArchive
-              <a
-                href="https://twitter.com/knyttneve"
-                rel="noopener noreferrer"
-                className="text-gray-50 ml-1"
-                target="_blank"
-              >
-                by Manish Yadav
-              </a>
+              <a className="text-gray-50 ml-1">by Manish Yadav</a>
             </p>
           </div>
         </div>
