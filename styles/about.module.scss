@@ -1,0 +1,380 @@
+$border: white;
+$line: #0c383e;
+$text: #fff;
+$background: #09383e;
+$small: 520px;
+$medium: 720px;
+$big: 1000px;
+$textWhite: rgb(204, 203, 203);
+
+.intro_container {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: row;
+  // background: $background;
+  background: linear-gradient(135deg, #3b0d4a 0%, #7b1733 100%);
+}
+.intro_col1 {
+  width: 30%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transform: 100px;
+}
+.intro_col2 {
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+  color: $textWhite;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  p{
+    &::first-letter {
+      color: white;
+      background-color: black;
+      border-radius: 2px;
+      box-shadow: 3px 3px 0 red;
+      font-size: 250%;
+      padding: 6px 3px;
+      margin-right: 6px;
+      float: left;
+  }
+  
+  }
+}
+@media screen and (max-width: $medium) {
+  .intro_container {
+    flex-direction: column;
+    height: auto;
+  }
+  .intro_col1 {
+    width: 100%;
+  }
+  .intro_col2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+.circle_text {
+  top: 3rem;
+  left: 13rem;
+  right: 0;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  opacity: 0.5;
+  color: $text;
+
+  &:after {
+    content: "";
+    width: 0.3rem;
+    height: 0.3rem;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: $line;
+    position: relative;
+    top: -0.65rem;
+    left: -5.05rem;
+  }
+}
+
+// PULSE ANIMATED ABOUT PAGE
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  animation: #{$str};
+}
+
+.about_second_container {
+  width: 100%;
+  padding: 0px;
+  background: linear-gradient(135deg, #3b0d4a 0%, #7b1733 100%);
+  @media screen and (max-width: $small) {
+    padding: 50px 0px;
+  }
+  @media screen and (max-width: $medium) {
+    padding: 30px 0px;
+  }
+}
+
+.profile_container {
+  width: 100%;
+  padding: 40px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile_overlay {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  display: block;
+}
+
+.pulse1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: auto;
+  z-index: 1;
+  opacity: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0px 0px 15px 10px rgba(50, 42, 42, 0.6);
+  box-sizing: border-box;
+  transition: all ease 0.8s;
+  @include animation("fade 3s infinite");
+
+  @include keyframes(fade) {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+
+    25% {
+      transform: scale(1.1);
+      opacity: 0.25;
+    }
+
+    50% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+
+    75% {
+      transform: scale(1.1);
+      opacity: 0.25;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+}
+
+.pulse2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 1;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: all ease 0.8s;
+  border: 2px solid rgba(135, 126, 126, 0.4);
+  box-shadow: inset 0px 0px 12px 5px rgb(21 20 20 / 80%);
+
+  @include animation("fade 5s infinite");
+
+  @include keyframes(fade) {
+    0% {
+      transform: scale(1);
+      opacity: 0;
+    }
+
+    25% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+
+    50% {
+      transform: scale(1.3);
+      opacity: 1;
+    }
+
+    75% {
+      transform: scale(1.2);
+      opacity: 0.5;
+    }
+
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+.moving_pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  scale: 1.1;
+  border-color: $border transparent;
+  border-width: 2px;
+  animation: ellipsesRotate 15s ease-in-out infinite;
+  // @include animation("fade 4s infinite");
+  // @include keyframes(fade) {
+  //   0% {
+  //     transform: rotate(-45deg);
+  //   }
+
+  //   100% {
+  //     transform: rotate(-405deg);
+  //   }
+  // }
+}
+@keyframes ellipsesRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.profile_image {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-radius: 2px solid black;
+  overflow: hidden;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  &:hover {
+    scale: 1.5;
+  }
+}
+
+.profile_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    position: relative;
+    font-size: 46px;
+    padding: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    z-index: 5;
+    transition: all ease 0.3s;
+  }
+  span {
+    color: #ccc;
+    font-size: 18px;
+    display: block;
+    font-weight: 400;
+    margin: 5px;
+    transition: all ease 0.3s;
+  }
+
+  .social_links {
+    position: relative;
+    opacity: 0;
+    transition: all ease 0.3s;
+    padding: 0 0 20px 0;
+    z-index: 5;
+    display: flex;
+    gap: 30px;
+
+    a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      border-radius: 30%;
+      text-align: center;
+      align-items: center;
+      line-height: 40px;
+      font-size: 20px;
+      background: #08242c;
+      color: white;
+
+      &:hover {
+        background: #fff;
+        scale: 1.3;
+      }
+    }
+  }
+
+  &:hover {
+    .social_links {
+      opacity: 1;
+      transform: translateY(-30px);
+      transition: all ease 0.4s;
+    }
+
+    h2 {
+      span {
+        opacity: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: $small) {
+    h2 {
+      font-size: 26px;
+    }
+    span {
+      font-size: 15px;
+    }
+
+    .social_links {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
