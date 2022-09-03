@@ -12,7 +12,7 @@ export const Banner1 = () => {
     <>
       <div className={styles.banner1_container}>
           <div className={styles.banner1_containerImage}>
-            <Image alt="banner" layout="fill" src="/background/bg_2.png" />
+            <Image alt="banner" layout="fill" src="/2.gif" />
           </div>
           <div className={styles.banner1_containerVideo}>
             <video src="/video/video_1.mp4" autoPlay muted loop></video>

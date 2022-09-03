@@ -13,7 +13,7 @@
   /* background: transparent; */
   /* position: absolute; */
 }
-.navbar_titlelogo {
+.navbar_title_logo {
   align-items: center;
   justify-content: center;
   display: flex;
@@ -42,12 +42,15 @@
 .navbar_link a:before {
   content: "";
   position: absolute;
-  background: #fff;
+  background: cyan;
   width: 0;
   height: 3px;
   bottom: 0;
   left: 0;
   transition: 0.3s ease;
+}
+.navbar_link a:hover {
+  color: orange;
 }
 .navbar .navbar_links .navbar_link a:hover:before {
   width: 100%;
@@ -102,16 +105,18 @@
   }
 
   .navbar_toggle {
-    /* background: url(menu.png)no-repeat; */
-    background-size: 30px;
-    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     cursor: pointer;
     transition: 0.3s ease;
-    display: block;
   }
-
+  .navbar_toggle_icon {
+    color: white;
+    font-size:26px;
+  }
   .menu-btn .active {
     z-index: 999;
     /* background: url(close.png)no-repeat; */
