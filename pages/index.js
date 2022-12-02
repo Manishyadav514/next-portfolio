@@ -58,14 +58,14 @@ export default function Home() {
           description={`Experience React and Next JS project. I have built Amazon clone with similar UI and funcationality like "add to bag", "add to wishlist", and so on.`}
           mockupImg="/assets/home_cards.png"
           reverse
-          banner="/assets/banner04.svg"
+          banner="/svg/banner04.svg"
           dark
         />
         {/* <HomeCard id="4" {...homeObjFour} /> */}
         {/* <HomeCard id="1" {...homeObjOne} /> */}
         <SectionWrapper
-          title="Project Section"
-          description={`Experience React and Next JS project. I have built Amazon clone with similar UI and funcationality like "add to bag", "add to wishlist", and so on.`}
+          title="Netflix Clone"
+          description={`Experience Netflix clone built with React.js and open source Rest API.`}
           mockupImg="/vidgif/netflix.gif"
           banner="/svg/wave-2.svg"
           dark
@@ -73,10 +73,10 @@ export default function Home() {
         <HomeCardTailwind
           id="6"
           props={homeObjFive}
-          dark={true}
-          imageFront={true}
+          dark={false}
+          imageFront={false}
         />
-        {/* <HomeCard id="3" {...homeObjThree} /> */}
+        <HomeCard id="3" {...homeObjThree} />
         {/* <HomeCard id="5" {...homeObjFive} /> */}
         <HomeCardTailwind
           id="6"

@@ -1,185 +1,117 @@
 import React from "react";
 import Link from "next/link";
 
+export const LinkComp = ({ linkHref, linkText, newPageOpen }) => {
+  return (
+    <li>
+      <Link href={linkHref}>
+        {newPageOpen ? (
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[16px] text-gray-50  cursor-pointer hover:text-red-200"
+          >
+            {linkText}
+          </a>
+        ) : (
+          <a className="text-[16px] text-gray-50  cursor-pointer hover:text-teal-200">
+            {linkText}
+          </a>
+        )}
+      </Link>
+    </li>
+  );
+};
+
 const Footer = () => {
   return (
-    <>
-      <footer className="text-grey-100 body-font bg-cyan-900">
-        <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-          <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-            <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-100">
-              <Link href="/">
-                <p className="ml-3 text-xl cursor-pointer">
-                  Fox<span className="text-teal-200">Archive</span>
-                </p>
-              </Link>
-            </a>
-            <p className="mt-2 text-sm text-gray-50">
-              Thanks for making this far!
-            </p>
+    <footer className="text-grey-100 bg-cyan-900 ">
+      <div className=" px-5 py-24 mx-auto flex flex-row  flex-nowrap phone:flex-col items-start tablet:items-center  tablet:flex-col tablet:flex-nowrap laptop:items-center desktop:w-3/4 ">
+        <div className="w-64 flex-shrink-0 flex-col tablet:mx-0 mx-auto text-center tablet:text-left">
+          <a className="flex title-font font-medium items-center tablet:justify-start justify-center text-gray-100">
+            <Link href="/">
+              <p className="ml-3 text-xl cursor-pointer">
+                Fox<span className="text-teal-200">Archive</span>
+              </p>
+            </Link>
+          </a>
+          <p className="mt-2 text-sm text-gray-50">
+            Thanks for making this far!
+          </p>
+        </div>
+        <div className="flex-grow flex flex-wrap flex-row tablet:pl-20 -mb-10 tablet:mt-0 mt-10 tablet:text-left text-center">
+          <div className="w-1/4 tablet:w-1/2 phone:w-full px-4">
+            <h2 className="title-font font-large text-gray-100 tracking-widest text-md mb-3 uppercase">
+              Website
+            </h2>
+            <nav className="list-none mb-10">
+              <LinkComp
+                linkHref="https://react-website-amazon-clone.vercel.app/"
+                linkText="Amazon Clone"
+                newPageOpen
+              />
+              <LinkComp
+                linkHref="https://react-netflix-clone-6fa02.web.app/"
+                linkText="Netflix Clone"
+                newPageOpen
+              />
+              <LinkComp
+                linkHref="https://react-shopping-cart-7f4fc.web.app/"
+                linkText="React Cart"
+                newPageOpen
+              />
+              <LinkComp
+                linkHref="https://html-css-js-iota.vercel.app/index.html"
+                linkText="HTML-CSS-JS"
+                newPageOpen
+              />
+            </nav>
           </div>
-          <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-large text-gray-100 tracking-widest text-md mb-3 uppercase">
-                Website
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <Link href="https://react-website-amazon-clone.vercel.app/">
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-50 hover:text-teal-200 cursor-pointer"
-                    >
-                      Amazon Clone
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://react-netflix-clone-6fa02.web.app/">
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-50 hover:text-teal-200 cursor-pointer"
-                    >
-                      Netflix Clone
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://react-shopping-cart-7f4fc.web.app/">
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-50 hover:text-teal-200 cursor-pointer"
-                    >
-                      React Shopping Cart
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://html-css-js-iota.vercel.app/index.html">
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-50 hover:text-teal-200 cursor-pointer"
-                    >
-                      HTML-CSS-JS Project
-                    </a>
-                  </Link>
-                </li>
-              </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-100 tracking-widest text-md mb-3 uppercase">
-                Passion
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <Link href="/poem">
-                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                      Poetry
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/photography#photo">
-                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                      Photography
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/photography#design">
-                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                      Photoshop
-                    </a>
-                  </Link>
-                </li>
-              </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-100 tracking-widest text-md mb-3 uppercase">
-                CATEGORIES
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <Link href="">
-                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                      First Link
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="">
-                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                      Second Link
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="">
-                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                      Third Link
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="">
-                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                      Fourth Link
-                    </a>
-                  </Link>
-                </li>
-              </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-100 tracking-widest text-md mb-3 uppercase">
-                Connect With Us
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <Link href="">
-                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                      About Us
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="">
-                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                      Contact Us
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="">
-                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                      Instagram
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="">
-                    <a className="text-gray-50 hover:text-teal-200 cursor-pointer">
-                      manish.yadav.elit@gmail.com
-                    </a>
-                  </Link>
-                </li>
-              </nav>
-            </div>
+          <div className="w-1/4 tablet:w-1/2 phone:w-full px-4">
+            <h2 className="title-font font-medium text-gray-100 tracking-widest text-md mb-3 uppercase">
+              Passion
+            </h2>
+            <nav className="list-none mb-10">
+              <LinkComp linkHref="/poem" linkText="Poetry" />
+              <LinkComp linkHref="photography#photo" linkText=" Photography" />
+              <LinkComp linkHref="/photography#design" linkText="Photoshop" />
+            </nav>
+          </div>
+          <div className="w-1/4 tablet:w-1/2 phone:w-full px-4">
+            <h2 className="title-font font-medium text-gray-100 tracking-widest text-md mb-3 uppercase">
+              CATEGORIES
+            </h2>
+            <nav className="list-none mb-10">
+              <LinkComp linkHref="#" linkText="Link" />
+              <LinkComp linkHref="#" linkText="Link" />
+              <LinkComp linkHref="#" linkText="Link" />
+              <LinkComp linkHref="#" linkText="Link" />
+            </nav>
+          </div>
+          <div className="phone:w-full px-4 w-1/4 tablet:w-1/2 ">
+            <h2 className="font-medium text-gray-100 tracking-widest text-md mb-3 uppercase">
+              Connect With Us
+            </h2>
+            <nav className="list-none mb-10">
+              <LinkComp linkHref="/about" linkText=" About Us" />
+              <LinkComp linkHref="/contact" linkText="Contact Us" />
+              <LinkComp
+                linkHref="https://www.instagram.com/awareness_hall/"
+                linkText="Instagram"
+                newPageOpen
+              />
+              <LinkComp linkHref="#" linkText="manish.yadav.elit@gmail.com" />
+            </nav>
           </div>
         </div>
-        <div className="bg-073d52">
-          <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col tablet:flex-row justify-center align-middle">
-            <p className="text-teal-200 text-sm text-center cursor-pointer tablet:text-left">
-              © 2022 FoxArchive
-              <a className="text-gray-50 ml-1">by Manish Yadav</a>
-            </p>
-          </div>
-        </div>
-      </footer>
-    </>
+      </div>
+      <div className="bg-073d52 py-4 px-5 flex flex-wrap justify-center align-middle">
+        <p className="text-teal-200 text-xl phone:text-sm text-center cursor-pointer tablet:text-left">
+          © 2022 FoxArchive
+          <a className="text-gray-50 ml-2">by Manish Yadav</a>
+        </p>
+      </div>
+    </footer>
   );
 };
 
