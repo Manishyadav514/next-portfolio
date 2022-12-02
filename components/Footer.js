@@ -171,8 +171,8 @@ const Footer = () => {
           </div>
         </div>
         <div className="bg-073d52">
-          <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row justify-center align-middle">
-            <p className="text-teal-200 text-sm text-center cursor-pointer sm:text-left">
+          <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col tablet:flex-row justify-center align-middle">
+            <p className="text-teal-200 text-sm text-center cursor-pointer tablet:text-left">
               © 2022 FoxArchive
               <a className="text-gray-50 ml-1">by Manish Yadav</a>
             </p>

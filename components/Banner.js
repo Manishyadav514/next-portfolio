@@ -10,23 +10,29 @@ import Image from "next/image";
 export const Banner1 = () => {
   return (
     <>
-      <div className={styles.banner1_container}>
-          <div className={styles.banner1_containerImage}>
-            <Image alt="banner" layout="fill" src="/2.gif" />
-          </div>
-          <div className={styles.banner1_containerVideo}>
-            <video src="/video/video_1.mp4" autoPlay muted loop></video>
-          </div>
+      <div className={styles.banner1_container}
+            style={{
+              backgroundImage: `url("/svg/river-1.svg")`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}>
+        {/* <div className={styles.banner1_containerImage}>
+          <Image alt="banner" layout="fill" src="/2.gif" />
+        </div> */}
+        <div className={styles.banner1_containerVideo}>
+          <video src="/vidgif/video_1.mp4" autoPlay muted loop></video>
+        </div>
         <div className={`${styles["banner1_content"]}`}>
           <div className={styles.banner1_containerImage}>
             <h1>
               Fox<span>Archive</span>
             </h1>
             <p>
-              FoxArchive is a project collections of a Javascript developer based
-              out of Mumbai. Explore real world projects including few things
-              that he is most passionate about. He believes in supremacy of
-              having multiple solution for a particular problem.
+              FoxArchive is a project collections of a Javascript developer
+              based out of Mumbai. Explore real world projects including few
+              things that he is most passionate about. He believes in supremacy
+              of having multiple solution for a particular problem.
             </p>
             <Link href="/about">
               <a>Read More</a>
@@ -145,5 +151,55 @@ export const Banner3 = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+export const Banner4 = () => {
+  return (
+    <>
+      <div className={` ${styles.banner}`}>
+        <div className={styles.banner1_container}>
+          {/* <div className={styles.banner1_containerImage}>
+          <Image alt="banner" layout="fill" src="/2.gif" />
+        </div> */}
+          <div className={`${styles.banner1_containerVideo}`}>
+            <video src="/video/video_1.mp4" autoPlay muted loop></video>
+          </div>
+          <div className={`${styles["banner1_content"]}`}>
+            <div className={styles.banner1_containerImage}>
+              <h1>
+                Fox<span>Archive</span>
+              </h1>
+              <p>
+                FoxArchive is a project collections of a Javascript developer
+                based out of Mumbai. Explore real world projects including few
+                things that he is most passionate about. He believes in
+                supremacy of having multiple solution for a particular problem.
+              </p>
+              <Link href="/about">
+                <a>Read More</a>
+              </Link>
+            </div>
+          </div>
+          <div className={styles.banner1_icons}>
+            <Link href="/">
+              <a target="_blank" rel="noopener noreferrer">
+                <FaFacebookMessenger style={{ color: "#448AFF" }} />
+              </a>
+            </Link>
+            <Link href="/">
+              <a>
+                <HiOutlineMail style={{ color: "#EA4335" }} />
+              </a>
+            </Link>
+            <Link href="https://www.instagram.com/awareness_hall/">
+              <a target="_blank" rel="noopener noreferrer">
+                <BsInstagram style={{ color: "#DE6666" }} />
+              </a>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };

@@ -1,14 +1,23 @@
 /* COMMON BANNER CONTENT */
+.banner {
+  background: url("/assets/banner.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
 
 /* BANNER1 */
 .banner1_container {
   position: relative;
   width: 100%;
-  min-height: 600px;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: #232A34;
+  /* background: #232A34; */
   padding: 100px 200px;
 }
 
@@ -95,6 +104,7 @@
 }
 @media (max-width: 720px) {
   .banner1_container {
+    min-height: 600;
     padding: 20px 20px;
   }
   .banner1_content h1 {

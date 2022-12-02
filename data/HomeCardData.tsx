@@ -2,16 +2,16 @@ interface HomeCardData {
   id: string;
   lightBg: boolean;
   lightText: boolean;
-  lightTextDesc: true;
+  lightTextDesc: boolean;
   topLine: string;
   title: string;
   description: string;
   imgStart: boolean;
   altText: string;
-  dark: true;
-  dark2: true;
-  primary: true;
-  darkText: false;
+  dark: boolean;
+  dark2: boolean;
+  primary: boolean;
+  darkText: boolean;
   imageSrc: string;
   iFrame: string;
   links: Array<{
@@ -85,8 +85,8 @@ export const homeObjTwo: HomeCardData = {
   imgStart: true,
   // imageSrc: require('../media/photography.jpg'),
   altText: "Car",
-  dark: true,
-  dark2: true,
+  dark: false,
+  dark2: false,
   primary: true,
   darkText: false,
   imageSrc: "/homeCard/bgp_car.svg",
