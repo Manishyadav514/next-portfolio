@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 import styles from "../../styles/Poem.module.css";
-// import * as fs from "fs";
 
 const PoemSlug = (props) => {
   // const { slug } = props.slug;
@@ -18,8 +16,8 @@ const PoemSlug = (props) => {
   // };
   const [poem, setPoem] = useState();
   useEffect(() => {
-    setPoem(props.poem)
-  }, []);
+    setPoem(props.poem);
+  }, [props.poem]);
 
   useEffect(() => {
     // fetchPoemData();
@@ -30,10 +28,7 @@ const PoemSlug = (props) => {
       <main className={styles.main}>
         <h1>{poem && poem.title}</h1>
         <hr />
-        {!poem && (
-          <>Hi</>
-        )}
-
+        {!poem && <>No Poem found</>}
       </main>
     </div>
   );
@@ -41,34 +36,33 @@ const PoemSlug = (props) => {
 
 export default PoemSlug;
 
-
 // import * as fs from 'fs';
-export async function getStaticPaths() {
-  let res = await fetch(`http://localhost:3000/api/poemAPI`);
-  let PoemData = await res.json();
-  // let allb = await fs.promises.readFile(`data/poemData.json`)
-  PoemData = PoemData.map((item) => {
-    return { params: { poemSlug: item?.title } };
-  });
-  return {
-    paths: PoemData,
-    fallback: true, // false or 'blocking'
-  };
-}
+// export async function getStaticPaths() {
+//   let res = await fetch(`http://localhost:3000/api/poemAPI`);
+//   let PoemData = await res.json();
+//   // let allb = await fs.promises.readFile(`data/poemData.json`)
+//   PoemData = PoemData.map((item) => {
+//     return { params: { poemSlug: item?.title } };
+//   });
+//   return {
+//     paths: PoemData,
+//     fallback: true, // false or 'blocking'
+//   };
+// }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const { poemSlug } = context.params;
+  console.log(poemSlug);
 
   // let allb = await fs.promises.readFile(`data/poemData.json`)
   // // let myBlog = await fs.promises.readFile(`data/blogData/${slug}.json`, 'utf-8')
   // let myBlog = allb.filter(b => b.title === {slug})
 
   let res = await fetch(`http://localhost:3000/api/poemAPI`);
-  let PoemData = await res.json()
-  let poem = PoemData.filter(b => b.title === poemSlug)[0];
+  let PoemData = await res.json();
+  let poem = PoemData.filter((b) => b.slug === poemSlug)[0];
+  console.log(poem);
   return {
     props: { poem }, // will be passed to the page component as props
   };
 }
-
-
