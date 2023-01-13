@@ -1,4 +1,3 @@
-
 .card {
   color: #fff;
   background: #232a34;
@@ -16,7 +15,7 @@
   align-items: center;
   grid-template-areas: "col1 col2";
 }
-.image_first{
+.image_first {
   grid-template-areas: "col2 col1";
 }
 .card_col1 {
@@ -52,6 +51,37 @@
   color: white;
   /* color: ${({darktext})=>(darktext ? '#f7f8fa' : '#010606' )}; */
 }
+/* square pulse */
+.colorAnimation {
+  animation: coloranimation 10s infinite ease-in-out;
+}
+
+@keyframes coloranimation {
+  0% {
+    /* rotate: 0deg; */
+    border-left-color:cyan;
+  }
+  25% {
+    /* rotate: 90deg; */
+    border-top-color:cyan;
+  }
+  50% {
+    /* rotate: 180deg; */
+    border-right-color:cyan;
+  }
+  75% {
+    /* rotate: 270deg; */
+    border-bottom-color:cyan;
+  }
+  80% {
+    border-left: 15px solid black;
+  }
+  100% {
+    /* rotate: 360deg; */
+    border-left: 15px solid cyan;
+  }
+}
+
 .card_button {
   display: flex;
   justify-content: flex-start;
@@ -64,19 +94,19 @@
   max-width: 600px;
   height: 50%;
 }
-.image_iframe{
+.image_iframe {
   width: 100%;
   margin: 0 0 10px 0;
   padding-right: 0;
 }
-.iFrame{
+.iFrame {
   width: 600px;
   height: 320px;
 }
-.homeCard_image{
-  display:none;
+.homeCard_image {
+  display: none;
 }
-.homeCardLinks a{
+.homeCardLinks a {
   position: relative;
   display: inline-block;
   text-decoration: none;
@@ -93,16 +123,16 @@
 .homeCardLinks a:hover {
   background-size: 100% 4px;
 }
-.homeCardLinks2{
+.homeCardLinks2 {
   cursor: pointer;
-    text-decoration: none;
-    font-size: 15px;
-    padding: 10px 20px;
-    border: 3px solid #1fe8b6;
-    position: relative;
-    font-weight: 700;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 10px 20px;
+  border: 3px solid #1fe8b6;
+  position: relative;
+  font-weight: 700;
 }
-.homeCardLinks2::before{
+.homeCardLinks2::before {
   content: "";
   position: absolute;
   width: 80%;
@@ -114,7 +144,7 @@
   left: -15px;
   border-width: 3px 0 0 3px;
 }
-.homeCardLinks2::after{
+.homeCardLinks2::after {
   content: "";
   position: absolute;
   width: 80%;
@@ -127,28 +157,25 @@
   border-width: 0 3px 3px 0;
 }
 @media screen and (max-width: 1000px) {
-  .iFrame{
+  .iFrame {
     display: none;
   }
-  .homeCard_image{
-    display:block;
+  .homeCard_image {
+    display: block;
   }
 }
 @media screen and (max-width: 768px) {
-    .h-card {
-      padding: 100px 0;
-    }
-    .card {
-      justify-content: normal;
-    }
-    .card_row {
-      display: flex;
-      flex-direction: column;
-    }
-    .card_heading {
-      font-size: 32px;
-    }
+  .h-card {
+    padding: 100px 0;
   }
-
-
-  
+  .card {
+    justify-content: normal;
+  }
+  .card_row {
+    display: flex;
+    flex-direction: column;
+  }
+  .card_heading {
+    font-size: 32px;
+  }
+}

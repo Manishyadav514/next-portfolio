@@ -210,12 +210,13 @@ export const Download = () => {
 export const SkillCard = ({ iconUrl, iconText, level, dark }) => (
   <div
     key={iconText}
-    className={`bg-white p-6 m-8 rounded-md flex justify-around items-center flex-col hover:shadow-lg cursor-pointer w-40 h-40 minlg:w-80 minlg:h-80 ${
+    className={`relative rounded bg-white p-6 m-8 flex justify-around items-center flex-col hover:shadow-lg cursor-pointer w-40 h-40 minlg:w-80 minlg:h-80 ${
       !dark
         ? "bg-[#000000e6] text-white  hover:bg-slate-700"
         : "bg-primary text-black hover:bg-slate-200"
-    } phone: m-2`}
+    } phone:m-2 phone:rounded-full ${styles}`}
   >
+    <div className={`absolute w-[105%] h-[105%] rounded border-[15px] border-black animate-spin ${styles.colorAnimation} phone:rounded-full`}></div>
     <Image src={iconUrl} alt={iconText} height={100} width={100} />
     <p className="my-2 font-semibold font-IBMPlex text-base minlg:text-3xl text-tertiary">
       {iconText}

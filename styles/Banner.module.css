@@ -137,8 +137,8 @@
 /* BANNER2 */
 .banner2_header {
   min-height: 1000px;
-  background: linear-gradient(rgb(0 0 0 / 92%), rgb(0 0 0 / 0%)),
-    url(/background/bg_16.jpg) center/cover no-repeat;
+  background: linear-gradient(0deg, rgb(10 25 36), rgb(0 0 0 / 0%)),
+  url(/svg/banner04.svg) center/cover no-repeat;
 }
 .banner2_banner {
   min-height: 500px;

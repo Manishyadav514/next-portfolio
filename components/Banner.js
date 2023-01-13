@@ -32,7 +32,7 @@ export const Banner1 = () => {
               FoxArchive is a project collections of a Javascript developer
               based out of Mumbai. Explore real world projects including few
               things that he is most passionate about. He believes in supremacy
-              of having multiple solution for a particular problem.
+              of having multiple solutions for a particular problem.
             </p>
             <Link href="/about">
               <a>Read More</a>
