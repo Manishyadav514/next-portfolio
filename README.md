@@ -1,2 +1,10 @@
 # Next-Portfolio
-This is a personal portfolio project build on Next.js.
+
+#### Packages
+
+
+
+1. 
+2. sharp
+   Next automatically detects and use this package for image optimization. (didn't work)
+3.
