@@ -47,9 +47,9 @@ export const Header1 = () => {
         <Image
           width={30}
           height={40}
-          quality={100}
           src="/logoicon/logo.png"
           alt="logo"
+          priority
         />
         <Link href="/">
           <a className={styles.navbar_title}>FoxArchive</a>

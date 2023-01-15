@@ -24,12 +24,12 @@ const Slug = (props) => {
 };
 
 import * as fs from "fs";
+// This generates static paths for each route.
 export async function getStaticPaths() {
   let data = await fs.promises.readdir(`data/blogData`);
   data = data.map((item) => {
     return { params: { blogSlug: item.split(".")[0] } };
   });
-
   return {
     paths: data,
     fallback: true, // false or 'blocking'
@@ -38,7 +38,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { blogSlug } = context.params;
-
   let myBlog = await fs.promises.readFile(
     `data/blogData/${blogSlug}.json`,
     "utf-8"
