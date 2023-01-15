@@ -36,12 +36,13 @@ const PoemSlug = (props) => {
 
 export default PoemSlug;
 
-// import * as fs from "fs";
+import * as fs from "fs";
 // This generates static paths for each route.
 export async function getStaticPaths() {
-  // let data = await fs.promises.readFile(`data/poemData/poemData.json`, "utf-8");
-  let res = await fetch(`http://localhost:3000/api/poemAPI`);
-  let data = await res.json();
+  let data = await fs.promises.readFile(`data/poemData/poemData.json`, "utf-8");
+  data = JSON.parse(data);
+  // let res = await fetch(`http://localhost:3000/api/poemAPI`);
+  // let data = await res.json();
   data = data.map((item) => {
     return { params: { poemSlug: item.slug } };
   });
@@ -52,8 +53,10 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps(context) {
   const { poemSlug } = context.params;
-  let res = await fetch(`http://localhost:3000/api/poemAPI`);
-  let PoemData = await res.json();
+  let PoemData = await fs.promises.readFile(`data/poemData/poemData.json`, "utf-8");
+  PoemData = JSON.parse(PoemData);
+  // let res = await fetch(`http://localhost:3000/api/poemAPI`);
+  // let PoemData = await res.json();
   let poem = PoemData.filter((b) => b.slug === poemSlug)[0];
   console.log(poem);
   return {
