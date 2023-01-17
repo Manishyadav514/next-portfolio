@@ -3,8 +3,13 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaWindowClose } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+// import logo from "../public/images/logo.png";
+import { useRouter } from "next/router";
 
 export const Header1 = () => {
+  const router = useRouter();
+  let currentPath = router.pathname;
+  currentPath === "/poem" && console.log(currentPath);
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen(!isOpen);
@@ -44,15 +49,15 @@ export const Header1 = () => {
   return (
     <div className={styles.navbar} id="navbar">
       <div className={styles.navbar_title_logo}>
-        <Image
-          width={30}
-          height={40}
-          src="/logoicon/logo.png"
+        {/* <Image
+          width={50}
+          height={60}
+          src={logo}
           alt="logo"
           priority
-        />
+        /> */}
         <Link href="/">
-          <a className={styles.navbar_title}>FoxArchive</a>
+          <a className={styles.navbar_title}>SenpaiArchive</a>
         </Link>
       </div>
       <div className={styles.navbar_toggle} onClick={toggle}>
@@ -64,7 +69,9 @@ export const Header1 = () => {
             <a>Home</a>
           </Link>
           <Link href="/poem">
-            <a>Poetry</a>
+            <a className={`${currentPath === "/poem" && ""}`}>
+              Alfaaz-e-Sukhan
+            </a>
           </Link>
           <Link href="/photography">
             <a>Photography</a>

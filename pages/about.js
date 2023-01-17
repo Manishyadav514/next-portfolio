@@ -17,7 +17,7 @@ const about = () => {
             <div className={styles.moving_pulse}></div>
             <div className={styles.profile_image}>
               <Image
-                src="/profile/profile-pic.png"
+                src="/images/profile-pic.png"
                 layout="fill"
                 alt="profile"
               />

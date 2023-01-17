@@ -59,26 +59,26 @@
 @keyframes coloranimation {
   0% {
     /* rotate: 0deg; */
-    border-left-color:cyan;
+    border-left-color: cyan;
   }
   25% {
     /* rotate: 90deg; */
-    border-top-color:cyan;
+    border-top-color: cyan;
   }
   50% {
-    /* rotate: 180deg; */
-    border-right-color:cyan;
+    /* rotate: 45deg; */
+    border-right-color: cyan;
   }
   75% {
     /* rotate: 270deg; */
-    border-bottom-color:cyan;
+    border-bottom-color: cyan;
   }
   80% {
-    border-left: 15px solid black;
+    border-left-color: black;
   }
   100% {
-    /* rotate: 360deg; */
-    border-left: 15px solid cyan;
+    /* rotate: 0deg; */
+    border-left-color: cyan;
   }
 }
 

@@ -2,95 +2,8 @@ import React from "react";
 import styles from "../styles/HomeCard.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { ButtonBW, ButtonWhite } from "../components/Button.js";
+import { ButtonBW } from "../components/Button.js";
 import { GoLinkExternal } from "react-icons/go";
-export const HomeCard = (props) => {
-  // console.log(props.svgSrc);
-  // let links = props.links;
-  // console.log(props.links.length);
-  // props.links.map((link) => console.log(link?.title));
-  return (
-    <div className={styles.card} id={props.id}>
-      <div
-        className={`${styles["card_row"]} ${
-          props.imgStart ? styles["image_first"] : styles[""]
-        }`}
-      >
-        <div className={styles.card_col1}>
-          <div className={styles.card_text}>
-            <div className={styles.card_title}>{props.topLine}</div>
-            <div className={styles.card_heading}>{props.title}</div>
-            <div className={styles.card_subtitle}>{props.description}</div>
-            <>
-              {props.links.length === 1 ? (
-                <div className={styles.card_button}>
-                  {props.dark ? (
-                    <Link href={props.links[0]?.direct}>
-                      <a target="_blank" rel="noopener noreferrer">
-                        <ButtonWhite title={props.links[0]?.title} />
-                      </a>
-                    </Link>
-                  ) : (
-                    <Link href={props.links[0]?.direct}>
-                      <a target="_blank" rel="noopener noreferrer">
-                        {/* <ButtonBlack title={props.links[0]?.title} /> */}
-                      </a>
-                    </Link>
-                  )}
-                </div>
-              ) : (
-                <div className={styles.card_links}>
-                  {props.links?.map((link) => (
-                    <>
-                      <div key={link?.direct} className={styles.homeCardLinks}>
-                        <Link href={link?.direct}>
-                          <a target="_blank" rel="noopener noreferrer">
-                            {link?.title} <GoLinkExternal />
-                          </a>
-                        </Link>
-                      </div>
-                    </>
-                  ))}
-                </div>
-              )}
-            </>
-          </div>
-        </div>
-        <div className={styles.card_col2}>
-          <div className={styles.image_box}>
-            <div className={styles.image_iframe}>
-              {props.iFrame ? (
-                <>
-                  <iframe
-                    src={props?.iFrame}
-                    className={styles.iFrame}
-                    frameBorder="0"
-                  ></iframe>
-                  <div className={styles.homeCard_image}>
-                    <Image
-                      src={props.imageSrc}
-                      width={400}
-                      height={400}
-                      layout="intrinsic"
-                      alt={props.altbox}
-                    />
-                  </div>
-                </>
-              ) : (
-                <Image
-                  src={props.imageSrc}
-                  width={400}
-                  height={400}
-                  alt={props.altbox}
-                />
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 export const HomeCardTailwind = ({ props, dark, imageFront }) => {
   return (
@@ -133,11 +46,11 @@ export const HomeCardTailwind = ({ props, dark, imageFront }) => {
               <>
                 {props.links?.map((link) => (
                   <div key={link?.direct}>
-                    <Link href={link?.direct}>
+                    <Link href={link?.direct} passHref legacyBehavior>
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="relative inline-block font-medium text-[16px] bg-[length:0%_4px] bg-slate-500 bg-no-repeat bg-center-bottom transition ease-in-out delay-150 hover:bg-slate-800 hover:bg-[length:100%_5px] "
+                        className="flex flex-row gap-3 align-middle items-center hover:text-cyan-400 text-base font-medium cursor-pointer"
                       >
                         {link?.title} <GoLinkExternal />
                       </a>
@@ -166,42 +79,24 @@ export const HomeCardTailwind = ({ props, dark, imageFront }) => {
   );
 };
 
-// export const HomeCardTailwind = ({props}) => {
-//   props = {...props}
-//   console.log(props.id)
-//   return (
-//     <div
-//       className="bg-[#232a34] text-black w-full grid justify-center p-5 "
-//     >
-//     </div>
-//   );
-// };
-
-// JSX Component
 export const Download = () => {
   return (
-    <div className="flex justify-center items-center p-16 phone:p-8 bg-white">
-      <div className="flex items-center w-full minmd:w-3/4 flex-col text-center">
-        <div>
-          <h1 className="font-bold font-IBMPlex text-5xl phone:text-4xl minmd:text-6xl minlg:text-8xl leading-12 minmd:leading-13 text-black">
-            Thanks for
-          </h1>
-          <p className="my-5 minmd:my-10 font-IBMPlex font-light text-xl minmd:text-3xl minlg:text-4xl minmd:leading-16 text-black">
-            Get the full source code on GitHub
-          </p>
-        </div>
-        <button className="bg-primary mt-4 py-4 px-6 text-white text-lg minmd:text-2xl font-IBMPlex font-medium rounded-lg hover:shadow-2xl">
-          Source Code
-        </button>
-        <div className="w-4/5 h-full flex justify-center items-center">
-          <Image
-            // width={100}
-            // height={100}
-            layout="fill"
-            src="/assets/scene.png"
-            alt="/assets/download_png"
-          />
-        </div>
+    <div className=" w-full p-16 phone:p-8 bg-[#164E63] flex flex-row gap-16 phone:gap-4 phone:flex-col justify-center items-center align-middle text-center">
+      <div>
+        <h1 className="font-bold font-IBMPlex text-5xl phone:text-4xl minmd:text-6xl minlg:text-8xl leading-12 minmd:leading-13 text-white">
+          <span className="text-teal-200">Thanks</span> for
+        </h1>
+        <p className="my-5 minmd:my-10 font-IBMPlex font-light text-xl minmd:text-3xl minlg:text-4xl minmd:leading-16 text-teal-200">
+          making this far.
+        </p>
+      </div>
+      <div className="flex justify-center items-center">
+        <Image
+          width={100}
+          height={100}
+          src="/images/anya.png"
+          alt="/images/download_png"
+        />
       </div>
     </div>
   );
@@ -216,12 +111,14 @@ export const SkillCard = ({ iconUrl, iconText, level, dark }) => (
         : "bg-primary text-black hover:bg-slate-200"
     } phone:m-2 phone:rounded-full ${styles}`}
   >
-    <div className={`absolute w-[105%] h-[105%] rounded border-[15px] border-black animate-spin ${styles.colorAnimation} phone:rounded-full`}></div>
-    <Image src={iconUrl} alt={iconText} height={100} width={100} />
-    <p className="my-2 font-semibold font-IBMPlex text-base minlg:text-3xl text-tertiary">
+    <div
+      className={`absolute w-[105%] h-[105%] rounded border-[15px] border-black ${styles.colorAnimation} phone:border-[12px] phone:rounded-full`}
+    ></div>
+    <Image src={iconUrl} alt={iconText} height={50} width={50} />
+    <p className="py-2 font-semibold font-IBMPlex text-base minlg:text-3xl text-tertiary">
       {iconText}
     </p>
-    <div className="mb-3 w-full h-4 bg-gray-200 rounded-full dark:bg-gray-700">
+    <div className="h-4 w-[100px] mb-3 bg-gray-300 rounded-full dark:bg-gray-700">
       <div
         className="h-4 bg-blue-600 rounded-full dark:bg-blue-500"
         style={{ width: level }}
@@ -229,6 +126,7 @@ export const SkillCard = ({ iconUrl, iconText, level, dark }) => (
     </div>
   </div>
 );
+
 export const Features = ({ dark }) => {
   return (
     <div
@@ -236,7 +134,7 @@ export const Features = ({ dark }) => {
     ${dark ? "bg-[#051a28] text-white" : "bg-primary text-black"} 
     `}
       style={{
-        backgroundImage: `url("/assets/banner02.svg")`,
+        backgroundImage: `url("/svg/wave-motion-corner.svg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -255,31 +153,31 @@ export const Features = ({ dark }) => {
 
         <div className="flex justify-center flex-wrap px-1 pb-12">
           <SkillCard
-            iconUrl="/logoicon/logo-js.svg"
+            iconUrl="/svg/logo-js.svg"
             iconText="JavaScript"
             level={80}
             dark={dark}
           />
           <SkillCard
-            iconUrl="/logoicon/logo-ts.svg"
+            iconUrl="/svg/logo-ts.svg"
             iconText="Typescript"
             level={70}
             dark={dark}
           />
           <SkillCard
-            iconUrl="/logoicon/logo-react.svg"
+            iconUrl="/svg/logo-react.svg"
             iconText="React.js"
             level={80}
             dark={dark}
           />
           <SkillCard
-            iconUrl="/logoicon/logo-next.svg"
+            iconUrl="/svg/logo-next.svg"
             iconText="Next.js"
             level={80}
             dark={dark}
           />
           <SkillCard
-            iconUrl="/logoicon/logo-aws.svg"
+            iconUrl="/svg/logo-aws.svg"
             iconText="AWS"
             level={50}
             dark={dark}
@@ -292,7 +190,7 @@ export const Features = ({ dark }) => {
 
 // export const theme = {
 //   colors: {
-//     backgroundImage: `url("/assets/banner.svg")`,
+//     backgroundImage: `url("/svg/wave-motion-1.svg")`,
 //     backgroundSize: "cover",
 //     backgroundPosition: "center",
 //     backgroundRepeat: "no-repeat",
@@ -308,19 +206,21 @@ export const Features = ({ dark }) => {
 
 export const SectionWrapper = ({
   title,
+  topLine,
   description,
   showBtn,
   mockupImg,
   banner,
-  reverse,
+  imageFront,
   dark,
+  links,
 }) => {
   console.log(styles.banner);
 
   return (
     <div
       className={`min-h-screen w-full flex justify-center items-center px-16 phone:p-4 
-      ${reverse ? "bg-black text-white" : "bg-primary text-black"} 
+      ${imageFront ? "bg-black text-white" : "bg-primary text-black"} 
 
       `}
       style={{
@@ -333,43 +233,102 @@ export const SectionWrapper = ({
       <div
         className={`flex  w-11/12 phone:w-full 
         ${
-          reverse
+          imageFront
             ? "flex-row-reverse phone:flex-col-reverse"
             : "flex-row  phone:flex-col"
         }`}
       >
         <div
           className={`flex-1 w-full flex justify-start flex-col phone:mb-10 
-          ${reverse ? "justify-end text-right" : "justify-start text-left"}
+          ${imageFront ? "justify-end text-right" : "justify-start text-left"}
         `}
         >
-          <h1
+          {/* <h1
             className={` font-bold font-IBMPlex text-5xl phone:text-4xl minmd:text-6xl minlg:text-8xl leading-12 minmd:leading-13
-          ${reverse ? "text-tertiary" : "text-white"}`}
+          ${imageFront ? "text-tertiary" : "text-[#01bf71]"}`}
           >
             {title}
-          </h1>
-          <p
+          </h1> */}
+          {/* <p
             className={`my-5 minmd:my-10 font-IBMPlex font-light text-xl minmd:text-3xl minlg:text-4xl minmd:leading-16
-            ${reverse ? "text-tertiary" : "text-white"}
+            ${imageFront ? "text-tertiary" : "text-white"}
           `}
           >
             {description}
-          </p>
+          </p> */}
+          <div className="min-w-[300px] px-3 py-4  pt-0 pb-16">
+            <div className="text-white text-xl font-bold leading-4 my-4 mx-0 tracking-wide ">
+              {topLine}
+            </div>
+            <h1
+              className={` font-bold font-IBMPlex text-5xl phone:text-4xl minmd:text-6xl minlg:text-8xl leading-12 minmd:leading-13
+          ${imageFront ? "text-tertiary" : "text-[#01bf71]"}`}
+            >
+              {title}
+            </h1>
+            <p
+              className={`my-5 minmd:my-10 font-IBMPlex font-light text-xl minmd:text-3xl minlg:text-4xl minmd:leading-16
+            ${imageFront ? "text-tertiary" : "text-white"}
+          `}
+            >
+              {description}
+            </p>
+            <>
+              {links && links.length === 1 ? (
+                <div
+                  className={`flex ${
+                    imageFront ? "justify-end" : "justify-start"
+                  }`}
+                >
+                  <Link href={links[0]?.direct}>
+                    <a target="_blank" rel="noopener noreferrer">
+                      <ButtonBW title={links[0]?.title} darkButton={!dark} />
+                    </a>
+                  </Link>
+                </div>
+              ) : (
+                <>
+                  {links &&
+                    links?.map((link) => (
+                      <div
+                        key={link?.direct}
+                        className={`flex ${
+                          imageFront ? "justify-end" : "justify-start"
+                        }`}
+                      >
+                        <Link href={link?.direct} passHref legacyBehavior>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`flex flex-row gap-3 align-middle items-center hover:text-cyan-400 text-base font-medium cursor-pointer ${
+                              dark ? "text-white" : "text-black"
+                            }`}
+                          >
+                            {link?.title} <GoLinkExternal />
+                          </a>
+                        </Link>
+                      </div>
+                    ))}
+                </>
+              )}
+            </>
+          </div>
           {/* {showBtn && <ButtonBlack />} */}
         </div>
         <div
-          className={`flex-1 flex justify-center items-center p-8 phone:px-0`}
+          className={`w- flex-1 flex justify-center items-center p-8 phone:px-0`}
         >
-          <Image
-            src={mockupImg}
-            width={500}
-            height={500}
-            alt="mockup"
-            className={`
-           ${reverse ? " fadeLeftMini" : " fadeRightMini"}
+          <div className="max-w-[800px] max-h-[800px]">
+            <Image
+              src={mockupImg}
+              width={400}
+              height={400}
+              alt="mockup"
+              className={`
+           ${imageFront ? " fadeLeftMini" : " fadeRightMini"}
            w-full h-full minmd:w-11/12 minmd:h-11/12 object-contain`}
-          />
+            />
+          </div>
         </div>
       </div>
     </div>

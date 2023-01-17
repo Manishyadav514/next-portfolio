@@ -1,13 +1,12 @@
 /* COMMON BANNER CONTENT */
 .banner {
-  background: url("/assets/banner.svg");
+  background: url("/svg/wave-motion-1.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
 }
-
 
 /* BANNER1 */
 .banner1_container {
@@ -17,14 +16,14 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* background: #232A34; */
+  background: #232a34;
   padding: 100px 200px;
 }
 
-.banner1_containerVideo{
+.banner1_containerVideo {
   display: none;
 }
-.banner1_containerImage{
+.banner1_containerImage {
   visibility: visible;
 }
 
@@ -50,12 +49,13 @@
 }
 .banner1_content {
   z-index: 888;
-  color: #fff;
+  color: #34173c;
   width: 70%;
   margin-top: 50px;
   display: block;
 }
 .banner1_content h1 {
+  /* transform: rotate(90deg); */
   font-size: 4em;
   font-weight: 900;
   letter-spacing: 5px;
@@ -68,9 +68,11 @@
   color: #01bf71;
 }
 .banner1_content p {
+  width: 500px;
   min-width: 200px;
   margin-bottom: 65px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 500;
   color: hsl(0deg 0% 100%);
 }
 .banner1_content a {
@@ -126,10 +128,10 @@
   }
 }
 @media (max-width: 520px) {
-  .banner1_containerVideo{
+  .banner1_containerVideo {
     display: block;
   }
-  .banner1_containerImage{
+  .banner1_containerImage {
     display: none;
   }
 }
@@ -138,7 +140,7 @@
 .banner2_header {
   min-height: 1000px;
   background: linear-gradient(0deg, rgb(10 25 36), rgb(0 0 0 / 0%)),
-  url(/svg/banner04.svg) center/cover no-repeat;
+    url(/svg/wave-blue-dl.svg) center/cover no-repeat;
 }
 .banner2_banner {
   min-height: 500px;
