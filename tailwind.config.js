@@ -20,6 +20,9 @@ module.exports = {
         "073d52": "#073d52",
         color1: "#232a34",
       },
+      fontFamily: {
+        AmsterdamOne: "AmsterdamOne",
+      },
     },
     screens: {
       phone: { min: "1px", max: "550px" },

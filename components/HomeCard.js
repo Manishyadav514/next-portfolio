@@ -234,8 +234,8 @@ export const SectionWrapper = ({
         className={`flex  w-11/12 phone:w-full 
         ${
           imageFront
-            ? "flex-row-reverse phone:flex-col-reverse"
-            : "flex-row  phone:flex-col"
+            ? "flex-row-reverse tablet:flex-col-reverse phone:flex-col-reverse"
+            : "flex-row  tablet:flex-col phone:flex-col"
         }`}
       >
         <div
@@ -261,8 +261,8 @@ export const SectionWrapper = ({
               {topLine}
             </div>
             <h1
-              className={` font-bold font-IBMPlex text-5xl phone:text-4xl minmd:text-6xl minlg:text-8xl leading-12 minmd:leading-13
-          ${imageFront ? "text-tertiary" : "text-[#01bf71]"}`}
+              className={`text-[#01bf71] font-bold font-IBMPlex text-5xl phone:text-4xl minmd:text-6xl minlg:text-8xl leading-12 minmd:leading-13
+          ${imageFront ? "text-tertiary" : ""}`}
             >
               {title}
             </h1>
@@ -321,12 +321,12 @@ export const SectionWrapper = ({
           <div className="max-w-[800px] max-h-[800px]">
             <Image
               src={mockupImg}
-              width={400}
-              height={400}
+              width={600}
+              height={600}
               alt="mockup"
-              className={`
-           ${imageFront ? " fadeLeftMini" : " fadeRightMini"}
-           w-full h-full minmd:w-11/12 minmd:h-11/12 object-contain`}
+              //     className={`
+              //  ${imageFront ? " fadeLeftMini" : " fadeRightMini"}
+              //  w-full h-full minmd:w-11/12 minmd:h-11/12 object-contain`}
             />
           </div>
         </div>

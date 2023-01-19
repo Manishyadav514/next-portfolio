@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>FoxArchive</title>
+        <title>DoomedSenpai</title>
         <meta name="description" content="Manish Yadav's portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

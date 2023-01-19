@@ -1,19 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Great+Vibes&family=Square+Peg&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Great+Vibes&family=Square+Peg&display=swap");
+/* font-family: 'Parisienne', cursive; */
+/* @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body{
-  box-sizing:border-box;
-  padding:0;
+/* Amstrdem Font from ttf file */
+@font-face {
+  font-family: "AmsterdamOne";
+  src: url("../public/font/AmsterdamOne.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  font-family: amsterdem;
 }
 ul {
   list-style-type: none;
@@ -23,7 +35,4 @@ ul {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-a {
-  text-decoration: none;
 }

@@ -25,7 +25,7 @@ export const Banner1 = () => {
         <div className={`${styles["banner1_content"]}`}>
           <div className={styles.banner1_containerImage}>
             <h1>
-              Senpai<span>Archive</span>
+              Manish <span> yadav</span>
             </h1>
             {/* <div class="container">
               <div class="circles">
@@ -50,7 +50,7 @@ export const Banner1 = () => {
                 className="absolute w-[450px] h-full p-8 flex text-lg"
                 style={{ color: "black" }}
               >
-                FoxArchive is a project collections of a Javascript developer
+                <span className="text"></span> This is a a project collections of a Javascript developer
                 based out of Mumbai. Explore real world projects including few
                 things that he is most passionate about. He believes in
                 supremacy of having multiple solutions for a particular problem.
@@ -58,7 +58,7 @@ export const Banner1 = () => {
             </div>
 
             {/* <p>
-              FoxArchive is a project collections of a Javascript developer
+              DearSenpai is a project collections of a Javascript developer
               based out of Mumbai. Explore real world projects including few
               things that he is most passionate about. He believes in supremacy
               of having multiple solutions for a particular problem.
@@ -98,7 +98,7 @@ export const Banner2 = () => {
       <div className={styles.banner2_header} id="home">
         <div className={styles.banner2_banner}>
           <div className={styles.banner2_container}>
-            <h1>Fox Archive</h1>
+            <h1>Dear Senpai</h1>
             <p>
               Nothing just a way to get know me better by exploring some of my
               projects.
@@ -148,10 +148,10 @@ export const Banner3 = () => {
         <div className={`${styles["banner3_ContentIcon"]}`}>
           <div className={`${styles["banner3_content"]}`}>
             <h1>
-              Fox<span>Archive</span>
+              Dear<span>Senpai</span>
             </h1>
             <p>
-              FoxArchive is projects collection of a Javascript developer at a
+              DearSenpai is projects collection of a Javascript developer at a
               Mumbai based firm. Explore real world projects including few
               things that he is most passionate about. He believes in supremacy
               of having multiple solution for a particular problem.
@@ -198,10 +198,10 @@ export const Banner4 = () => {
           <div className={`${styles["banner1_content"]}`}>
             <div className={styles.banner1_containerImage}>
               <h1>
-                Fox<span>Archive</span>
+                Dear<span>Senpai</span>
               </h1>
               <p>
-                FoxArchive is a project collections of a Javascript developer
+                DearSenpai is a project collections of a Javascript developer
                 based out of Mumbai. Explore real world projects including few
                 things that he is most passionate about. He believes in
                 supremacy of having multiple solution for a particular problem.

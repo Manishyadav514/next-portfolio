@@ -13,22 +13,10 @@
   /* background: transparent; */
   /* position: absolute; */
 }
-.navbar_title_logo {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
 .navbar_change {
   position: sticky;
   background: transparent;
 }
-.navbar_title {
-  color: #fff;
-  font-size: 1.5em;
-  font-weight: 700;
-  text-decoration: none;
-}
-
 .navbar_link a {
   position: relative;
   color: #fff;

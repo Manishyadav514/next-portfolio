@@ -17,7 +17,7 @@
   justify-content: center;
   flex-direction: column;
   background: #232a34;
-  padding: 100px 200px;
+  padding: 50px 100px;
 }
 
 .banner1_containerVideo {
@@ -56,15 +56,15 @@
 }
 .banner1_content h1 {
   /* transform: rotate(90deg); */
+  display: flex;
   font-size: 4em;
-  font-weight: 900;
-  letter-spacing: 5px;
-  line-height: 75px;
+  font-weight: 600;
   margin-bottom: 40px;
+  font-family: AmsterdamOne;
 }
 .banner1_content h1 span {
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 400;
   color: #01bf71;
 }
 .banner1_content p {
@@ -103,6 +103,11 @@
 .banner1_icons a:hover {
   transform: scale(1.3);
   background: cyan;
+}
+@media (max-width: 1500px) {
+  .banner1_container {
+    padding: 40px 40px;
+  }
 }
 @media (max-width: 720px) {
   .banner1_container {

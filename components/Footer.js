@@ -33,7 +33,7 @@ const Footer = () => {
             <a className="flex title-font font-medium items-center tablet:justify-start justify-center text-gray-100">
               <Link href="/">
                 <p className="ml-3 text-xl cursor-pointer">
-                  Fox<span className="text-teal-200">Archive</span>
+                  Dear<span className="text-teal-200">Senpai</span>
                 </p>
               </Link>
             </a>
@@ -121,7 +121,7 @@ const Footer = () => {
       </div>
       <div className="bg-[#051a28] py-4 px-5 flex flex-wrap justify-center align-middle">
         <p className="text-teal-200 text-xl phone:text-sm text-center cursor-pointer tablet:text-left">
-          © 2022 FoxArchive
+          © 2022 DearSenpai
           <a className="text-gray-50 ml-2">by Manish Yadav</a>
         </p>
       </div>

@@ -48,16 +48,18 @@ export const Header1 = () => {
 
   return (
     <div className={styles.navbar} id="navbar">
-      <div className={styles.navbar_title_logo}>
+      <div className="flex align-middle items-center justify-center p-2">
         {/* <Image
-          width={50}
-          height={60}
-          src={logo}
+          width={128}
+          height={64}
+          src={"images/logo.jpg"}
           alt="logo"
           priority
         /> */}
         <Link href="/">
-          <a className={styles.navbar_title}>SenpaiArchive</a>
+          <a className="text-base text-white font-medium font-AmsterdamOne">
+            Dear Senpai
+          </a>
         </Link>
       </div>
       <div className={styles.navbar_toggle} onClick={toggle}>
