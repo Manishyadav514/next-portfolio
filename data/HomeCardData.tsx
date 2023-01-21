@@ -70,10 +70,10 @@ export const SectionWrapperData: Array<SectionWrapper> = [
     title: "React & Next Project",
     description:
       "In the course of of my academic period, I have built some real life React projects using create-react-app or Next.js.",
-      imageFirst: false,
-      dark: true,
-      mockupImg: "/svg/bgp_car.svg",
-      banner: "/svg/wave-blue-ld.svg",
+    imageFirst: false,
+    dark: true,
+    mockupImg: "/svg/bgp_car.svg",
+    banner: "/svg/wave-blue-ld.svg",
     links: [
       {
         id: 1,
@@ -87,31 +87,31 @@ export const SectionWrapperData: Array<SectionWrapper> = [
       },
     ],
   },
-  {
-    topLine: "Static Website",
-    title: "Html-Css-Js",
-    description:
-      "This is my static website which contains some of my CSS and Javascript components",
+  // {
+  //   topLine: "Static Website",
+  //   title: "Html-Css-Js",
+  //   description:
+  //     "This is my static website which contains some of my CSS and Javascript components",
 
-    imageFirst: true,
-    dark: true,
-    mockupImg: "/images/html-css-js.jpeg",
-    banner: "/svg/wave-blue-dl.svg",
-    links: [
-      {
-        id: 1,
-        title: "explore Html-Css-Javascript",
-        direct: "https://html-css-js-iota.vercel.app/index.html",
-      },
-    ],
-  },
+  //   imageFirst: true,
+  //   dark: true,
+  //   mockupImg: "/images/html-css-js.jpeg",
+  //   banner: "/svg/wave-blue-dl.svg",
+  //   links: [
+  //     {
+  //       id: 1,
+  //       title: "explore Html-Css-Javascript",
+  //       direct: "https://html-css-js-iota.vercel.app/index.html",
+  //     },
+  //   ],
+  // },
   {
     topLine: "Click to CheckOut!",
     title: "Photography/Video",
     description:
       "Collection of my photos, vector, posters, videos and many more",
     imageFirst: true,
-    mockupImg: "/images/anime-girl2.png",
+    mockupImg: "/images/anime-girl.png",
     dark: true,
     banner: "",
     links: [
@@ -189,7 +189,7 @@ export const homeObjThree: HomeCardData = {
   dark2: true,
   primary: true,
   darkText: false,
-  imageSrc: "/images/html-css-js.jpeg",
+  imageSrc: "/images/html-css-js.png",
   iFrame: "https://html-css-js-iota.vercel.app/index.html",
   links: [
     {

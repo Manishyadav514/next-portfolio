@@ -13,7 +13,7 @@ export const Banner1 = () => {
       <div
         className={styles.banner1_container}
         style={{
-          backgroundImage: `url("/svg/bgi-china.svg")`,
+          backgroundImage: `url("/images/sunset.jpg")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -47,8 +47,8 @@ export const Banner1 = () => {
             <div class="relative h-[230px] w-[500px] mb-10 rounded-[25px] bg-[#ffffff33] backdrop-sepia-0 border border-[#ffffff1a] shadow-xl shadow-[#00000033] overflow-hidden">
               <div class="absolute h-[700px] w-[500px] rounded-full bg-transparent border-[50px] border-[#ffffff1a] b-[-250px] r-[-250px] box-border after:content-[''] after:absolute after:h-[600px] after:w-[600px] after:rounded-full after:bg-transparent after:border-[30px] after:border-[#ffffff1a] after:b-[-80px] after:r-[-80px] after:box-border"></div>
               <p
-                className="absolute w-[450px] h-full p-8 flex text-lg"
-                style={{ color: "black" }}
+                className="absolute w-[450px] h-full p-8 flex text-xl font-bold"
+                style={{ color: "#051A28" }}
               >
                 <span className="text"></span> This is a a project collections of a Javascript developer
                 based out of Mumbai. Explore real world projects including few

@@ -316,7 +316,7 @@ export const SectionWrapper = ({
           {/* {showBtn && <ButtonBlack />} */}
         </div>
         <div
-          className={`w- flex-1 flex justify-center items-center p-8 phone:px-0`}
+          className={` flex-1 flex justify-center items-center p-8 phone:px-0`}
         >
           <div className="max-w-[800px] max-h-[800px]">
             <Image
@@ -324,9 +324,7 @@ export const SectionWrapper = ({
               width={600}
               height={600}
               alt="mockup"
-              //     className={`
-              //  ${imageFront ? " fadeLeftMini" : " fadeRightMini"}
-              //  w-full h-full minmd:w-11/12 minmd:h-11/12 object-contain`}
+              // className="w-full h-full minmd:w-6/12 minmd:h-6/12 object-contain"
             />
           </div>
         </div>

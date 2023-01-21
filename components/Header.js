@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 export const Header1 = () => {
   const router = useRouter();
   let currentPath = router.pathname;
+  const home = currentPath === "/";
   currentPath === "/poem" && console.log(currentPath);
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
@@ -47,7 +48,15 @@ export const Header1 = () => {
   // });
 
   return (
-    <div className={styles.navbar} id="navbar">
+    // <div className={styles.navbar} id="navbar">
+    <div
+      className={`z-[999] top-0 left-0 w-full flex justify-between items-center py-[15px] px-[200px] tablet:p-[25px] mobile:p-[15px] transition-all ${
+        home
+          ? "absolute bg-transparent text-black"
+          : "bg-[#051A28] text-white"
+      } ${styles.navbar}`}
+      id="navbar"
+    >
       <div className="flex align-middle items-center justify-center p-2">
         {/* <Image
           width={128}
@@ -57,7 +66,7 @@ export const Header1 = () => {
           priority
         /> */}
         <Link href="/">
-          <a className="text-base text-white font-medium font-AmsterdamOne">
+          <a className="text-base text-white font-medium hover:text-cyan-800 font-AmsterdamOne">
             Dear Senpai
           </a>
         </Link>
