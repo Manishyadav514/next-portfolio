@@ -34,7 +34,7 @@ $textWhite: rgb(204, 203, 203);
   text-align: left;
   justify-content: center;
   align-items: center;
-  p{
+  p {
     &::first-letter {
       color: white;
       background-color: black;
@@ -44,8 +44,7 @@ $textWhite: rgb(204, 203, 203);
       padding: 6px 3px;
       margin-right: 6px;
       float: left;
-  }
-  
+    }
   }
 }
 @media screen and (max-width: $medium) {
@@ -352,29 +351,3 @@ $textWhite: rgb(204, 203, 203);
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

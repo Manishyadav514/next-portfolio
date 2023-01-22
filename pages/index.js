@@ -1,7 +1,6 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import React from "react";
-import * as banners from "../components/Banner";
+import {Banner} from "../components/Banner";
 import Contact from "../components/Contact";
 import { Features, Download, SectionWrapper } from "../components/HomeCard.js";
 import { SectionWrapperData } from "../data/HomeCardData.tsx";
@@ -9,7 +8,7 @@ import { SectionWrapperData } from "../data/HomeCardData.tsx";
 export default function Home() {
   SectionWrapperData.map((item) => console.log(item.title));
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>DoomedSenpai</title>
         <meta name="description" content="Manish Yadav's portfolio" />
@@ -17,7 +16,7 @@ export default function Home() {
       </Head>
 
       <div>
-        <banners.Banner1 />
+        <Banner />
         {SectionWrapperData?.slice(0, 3).map((item, index) => {
           return (
             <>
@@ -67,6 +66,6 @@ export default function Home() {
         <Contact />
         <Download />
       </div>
-    </div>
+    </>
   );
 }

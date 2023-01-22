@@ -1,6 +1,11 @@
 import React from "react";
 
-export const ButtonBW = ({ title, darkButton }) => {
+interface ButtonBWProps {
+  label: string;
+  darkButton: boolean;
+}
+
+export const ButtonBW = ({ label, darkButton }: ButtonBWProps) => {
   return (
     <div
       className={`min-w-[70px] uppercase px-3 py-[6px] inline-block transition duration-300 ease-in-out hover:ease-in-out text-sm border-2 poimter rounded ${
@@ -9,7 +14,7 @@ export const ButtonBW = ({ title, darkButton }) => {
           : "ease-in-out text-white border-white hover:text-[#222] hover:bg-white"
       }`}
     >
-      {title}
+      {label}
     </div>
   );
 };

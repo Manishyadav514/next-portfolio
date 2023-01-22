@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "../styles/HomeCard.module.css";
+import styles from "../styles/common.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { ButtonBW } from "../components/Button.js";
+import { ButtonBW } from "./Button";
 import { GoLinkExternal } from "react-icons/go";
 
 export const HomeCardTailwind = ({ props, dark, imageFront }) => {
@@ -36,7 +36,7 @@ export const HomeCardTailwind = ({ props, dark, imageFront }) => {
                 <Link href={props.links[0]?.direct}>
                   <a target="_blank" rel="noopener noreferrer">
                     <ButtonBW
-                      title={props.links[0]?.title}
+                      label={props.links[0]?.title}
                       darkButton={!dark}
                     />
                   </a>
@@ -109,10 +109,10 @@ export const SkillCard = ({ iconUrl, iconText, level, dark }) => (
       !dark
         ? "bg-[#000000e6] text-white  hover:bg-slate-700"
         : "bg-primary text-black hover:bg-slate-200"
-    } phone:m-2 phone:rounded-full ${styles}`}
+    } phone:m-2 phone:rounded-full `}
   >
     <div
-      className={`absolute w-[105%] h-[105%] rounded border-[15px] border-black ${styles.colorAnimation} phone:border-[12px] phone:rounded-full`}
+      className={`absolute w-[105%] h-[105%] rounded border-[15px] border-black ${styles.borderAnimation} phone:border-[12px] phone:rounded-full`}
     ></div>
     <Image src={iconUrl} alt={iconText} height={50} width={50} />
     <p className="py-2 font-semibold font-IBMPlex text-base minlg:text-3xl text-tertiary">
@@ -215,7 +215,6 @@ export const SectionWrapper = ({
   dark,
   links,
 }) => {
-  console.log(styles.banner);
 
   return (
     <div
@@ -282,7 +281,7 @@ export const SectionWrapper = ({
                 >
                   <Link href={links[0]?.direct}>
                     <a target="_blank" rel="noopener noreferrer">
-                      <ButtonBW title={links[0]?.title} darkButton={!dark} />
+                      <ButtonBW label={links[0]?.title} darkButton={!dark} />
                     </a>
                   </Link>
                 </div>
