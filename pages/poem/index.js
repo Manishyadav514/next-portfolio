@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import styles from "../../styles/Poem.module.css";
 import Link from "next/link";
 // import InfiniteScroll from 'react-infinite-scroll-component';
 
@@ -19,8 +18,8 @@ const Poem = (props) => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
+    <div className="">
+      <main className="">
         {!poems ? (
           <>No Poem Found</>
         ) : (
@@ -29,7 +28,7 @@ const Poem = (props) => {
               return (
                 <div key={poem?.title}>
                   <Link href={`/poem/${poem?.slug}`}>
-                    <button className={styles.btn}>{poem?.title}</button>
+                    <button className="">{poem?.title}</button>
                   </Link>
                 </div>
               );
