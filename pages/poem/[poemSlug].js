@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import styles from "../../styles/Poem.module.css";
 
 const PoemSlug = (props) => {
   // const { slug } = props.slug;
@@ -24,13 +23,11 @@ const PoemSlug = (props) => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1>{poem && poem.title}</h1>
-        <hr />
-        {!poem && <>No Poem found</>}
-      </main>
-    </div>
+    <>
+      <h1>{poem && poem.title}</h1>
+      <hr />
+      {!poem && <>No Poem found</>}
+    </>
   );
 };
 
@@ -53,7 +50,10 @@ export async function getStaticPaths() {
 }
 export async function getStaticProps(context) {
   const { poemSlug } = context.params;
-  let PoemData = await fs.promises.readFile(`data/poemData/poemData.json`, "utf-8");
+  let PoemData = await fs.promises.readFile(
+    `data/poemData/poemData.json`,
+    "utf-8"
+  );
   PoemData = JSON.parse(PoemData);
   // let res = await fetch(`http://localhost:3000/api/poemAPI`);
   // let PoemData = await res.json();
