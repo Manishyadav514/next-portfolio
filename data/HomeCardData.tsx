@@ -4,7 +4,12 @@ interface SectionWrapper {
   description: string;
   imageFirst: boolean;
   mockupImg: string;
-  banner: string;
+  bannerSVG: {
+    banner: string;
+    primaryColor?: string;
+    secondryColor?: string;
+    rotate?: number;
+  };
   dark: boolean;
   links: Array<{
     status?: boolean;
@@ -20,8 +25,12 @@ export const SectionWrapperData: Array<SectionWrapper> = [
     description:
       "Emotions can make people extremely vulnerable. My personal philosophy to overcome emotions is to express them in some form. That's why I express my feelings via my poems. It allows me to touch the sky with my bare hands.",
     imageFirst: false,
-    mockupImg: "/images/kiki.png",
-    banner: "/svg/wave-blue-dl-2.svg",
+    mockupImg: "/svg/i-mind.svg",
+    bannerSVG: {
+      banner: "",
+      primaryColor: "#073D52",
+      secondryColor: "#164E63",
+    },
     dark: true,
     links: [
       {
@@ -38,8 +47,12 @@ export const SectionWrapperData: Array<SectionWrapper> = [
       "Experience Netflix clone built with React.js and open source Rest API. Project is more focused on API integration rather than features.",
     imageFirst: false,
     dark: true,
-    mockupImg: "/vidgif/netflix.gif",
-    banner: "/svg/wave-blue-ld.svg",
+    mockupImg: "/images/netflix.webp",
+    bannerSVG: {
+      banner: "",
+      primaryColor: "#012233",
+      secondryColor: "#051A28",
+    },
     links: [
       {
         id: 1,
@@ -55,8 +68,12 @@ export const SectionWrapperData: Array<SectionWrapper> = [
       "Fully responsive Amazon clone build using React. Has implemented sorting, search, add to wish list, add to bag features. I tried to make it as similar as real Amazon website",
     imageFirst: true,
     dark: true,
-    mockupImg: "/images/amazon.png",
-    banner: "/svg/wave-blue-dl.svg",
+    mockupImg: "/images/amazon.webp",
+    bannerSVG: {
+      banner: "/svg/motion-downcurve.svg",
+      primaryColor: "#073D52",
+      secondryColor: "#012233",
+    },
     links: [
       {
         id: 1,
@@ -72,8 +89,12 @@ export const SectionWrapperData: Array<SectionWrapper> = [
       "In the course of of my academic period, I have built some real life React projects using create-react-app or Next.js.",
     imageFirst: false,
     dark: true,
-    mockupImg: "/svg/bgp_car.svg",
-    banner: "/svg/wave-blue-ld.svg",
+    mockupImg: "/svg/m-car.svg",
+    bannerSVG: {
+      banner: "/svg/bgb-tilt.svg",
+      primaryColor: "#012233",
+      secondryColor: "#051A28",
+    },
     links: [
       {
         id: 1,
@@ -87,33 +108,41 @@ export const SectionWrapperData: Array<SectionWrapper> = [
       },
     ],
   },
-  // {
-  //   topLine: "Static Website",
-  //   title: "Html-Css-Js",
-  //   description:
-  //     "This is my static website which contains some of my CSS and Javascript components",
+  {
+    topLine: "Static Website",
+    title: "Html-Css-Js",
+    description:
+      "This is my static website which contains some of my CSS and Javascript components",
 
-  //   imageFirst: true,
-  //   dark: true,
-  //   mockupImg: "/images/html-css-js.jpeg",
-  //   banner: "/svg/wave-blue-dl.svg",
-  //   links: [
-  //     {
-  //       id: 1,
-  //       title: "explore Html-Css-Javascript",
-  //       direct: "https://html-css-js-iota.vercel.app/index.html",
-  //     },
-  //   ],
-  // },
+    imageFirst: true,
+    dark: true,
+    mockupImg: "images/anime-girl.png",
+    bannerSVG: {
+      banner: "/svg/wave.svg",
+      primaryColor: "#012233",
+      secondryColor: "#051A28",
+    },
+    links: [
+      {
+        id: 1,
+        title: "explore Html-Css-Javascript",
+        direct: "https://html-css-js-iota.vercel.app/index.html",
+      },
+    ],
+  },
   {
     topLine: "Click to CheckOut!",
     title: "Photography/Video",
     description:
       "Collection of my photos, vector, posters, videos and many more",
     imageFirst: true,
-    mockupImg: "/images/anime-girl.png",
+    mockupImg: "/svg/m-camera.svg",
     dark: true,
-    banner: "",
+    bannerSVG: {
+      banner: "/svg/diagonal.svg",
+      primaryColor: "#012233",
+      secondryColor: "#051A28",
+    },
     links: [
       {
         id: 1,
@@ -163,7 +192,7 @@ export const homeObjFour: HomeCardData = {
   dark2: true,
   primary: true,
   darkText: false,
-  imageSrc: "/svg/bgp_camera.svg",
+  imageSrc: "/svg/m-camera.svg",
   iFrame: "",
   links: [
     {

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import Contact from "../components/Contact";
 
 const about = () => {
   return (
@@ -84,7 +85,7 @@ const about = () => {
           </p>
         </div>
       </div>
-      <div style={{ width: "100%", height: "100%", display:"block"}}>
+      <div style={{ width: "100%", height: "100%", display: "block" }}>
         {/* <img
           src="/WebPoster.png"
           style={{ width: "100%"}}
@@ -98,6 +99,7 @@ const about = () => {
           objectFit="cover"
         /> */}
       </div>
+      <Contact />
     </>
   );
 };

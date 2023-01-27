@@ -70,7 +70,7 @@ export const Header1 = () => {
           priority
         /> */}
         <Link href="/">
-          <a className="text-base font-medium hover:text-cyan-800 font-AmsterdamOne">
+          <a className="text-base font-medium hover:text-whiteBlue font-AmsterdamOne">
             Dear Senpai
           </a>
         </Link>

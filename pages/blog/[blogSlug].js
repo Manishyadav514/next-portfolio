@@ -12,59 +12,53 @@ const Slug = (props) => {
   return (
     <>
       <div
-        className="relative text-white flex items-end justify-start w-full text-left bg-center bg-cover h-[500px] bg-gray-500"
-        style={{
-          backgroundImage: `linear-gradient(0deg, rgb(0 0 0 / 68%), rgb(1 18 34 / 75%)), url(https://source.unsplash.com/random/240x320&quot;)`,
-        }}
+        className="relative  flex items-end justify-start w-full text-left bg-center bg-cover h-[500px]"
+        style={
+          {
+            backgroundImage: `linear-gradient(0deg, rgb(0 0 0 / 68%), rgb(1 18 34 / 75%)), url("https://source.unsplash.com/random/240x320&quot;")`,
+            // backgroundImage: `linear-gradient(90deg, #DEEBEC, #73B3B2)`,
+          }
+        }
       >
-        <div className="absolute top-2 left-2 p-1/2 flex flex-col">
-          <span className="text-3xl font-semibold leading-none tracking-wide">
+        <div className="text-aquaLight2 absolute top-2 left-2 p-1/2 flex flex-col">
+          <span className="text-4xl font-extrabold leading-none tracking-wide">
             Go
           </span>
-          <span className="leading-none uppercase  hover:text-cyan-700">
+          <span className="hover:text-aquaLight1 text-1xl font-bold leading-none uppercase">
             <Link href="/blog">&#8592; Back</Link>
           </span>
         </div>
-        <div className="absolute top-[200px] left-[100px] tablet:left-12 phone:left-8">
-          <h3 className="text-5xl phone:text-3xl font-bold leading-none flex-1 py-2">
+        <div className="bg-aquaDark2 text-aquaLight1 px-[2rem] absolute top-[200px] left-[100px] tablet:left-12 phone:left-8">
+          <h3 className="text-7xl font-GreatVibes phone:text-3xl font-bold leading-none flex-1 py-2">
             {blog?.title}
           </h3>
         </div>
       </div>
       {/* <img src="https://source.unsplash.com/random/480x360" alt="" className="w-full h-60 phone:h-96 bg-gray-500" ></img> */}
-      <article className="mb-32 max-w-7xl flex flex-col overflow-hidden rounded relative w-11/12 px-10 -mt-[100px]  phone:px-10 tablet:px-16 bg-gray-900 text-gray-100  py-24 mx-auto space-y-16">
-        <div className="w-full mx-auto space-y-4">
-          <div className="flex justify-between">
-            <h1 className="text-xl font-bold leading-none">by Manish Yadav</h1>
-            <p className="px-3 py-2 text-xs font-semibold tracking-wider uppercase text-gray-100 bgundefined">
-              Feb 20, 2021
-            </p>
+      <div className="">
+        <article className="bg-white text-aquaDark1 border border-aquaLight2 shadow-lg mb-32 max-w-7xl flex flex-col overflow-hidden rounded relative w-11/12 px-10 phone:px-4 tablet:px-6 -mt-[100px]   text-aqua1  py-24 mx-auto space-y-16">
+          <div className="w-full mx-auto space-y-4">
+            <div className="flex justify-between">
+              <h1 className="text-2xl font-bold leading-none">
+                by Manish Yadav
+              </h1>
+              <p className="px-3 py-2 text-xs font-semibold tracking-wider uppercase  bgundefined">
+                Feb 20, 2021
+              </p>
+            </div>
+            <div className="flex flex-wrap space-x-2 text-sm ">
+              <span>#MambaUI</span>
+              <span>#TailwindCSS</span>
+              <span>#Angular</span>
+            </div>
           </div>
-          <div className="flex flex-wrap space-x-2 text-sm text-gray-400">
-            <span>#MambaUI</span>
-            <span>#TailwindCSS</span>
-            <span>#Angular</span>
+          <div className="text-xl tablet:text-lg phone:text-base font-normal leading-10 tracking-normal">
+            {blog && (
+              <div dangerouslySetInnerHTML={createMarkup(blog.content)}></div>
+            )}
           </div>
-          <p className="text-sm text-gray-400">
-            by
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline text-violet-400"
-            >
-              <span>Leroy Jenkins</span>
-            </a>
-            on
-            <time datetime="2021-02-12 15:34:18-0200">Feb 12th 2021</time>
-          </p>
-        </div>
-        <div className="text-gray-100">
-          {blog && (
-            <div dangerouslySetInnerHTML={createMarkup(blog.content)}></div>
-          )}
-        </div>
-      </article>
+        </article>
+      </div>
     </>
   );
 };

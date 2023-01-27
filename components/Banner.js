@@ -10,9 +10,9 @@ export const Banner = () => {
       <div
         className="relative w-full h-[100vh] phone:h-auto flex flex-col justify-center m-0"
         style={{
-          backgroundImage: `url("/images/sunset.jpg")`,
+          backgroundImage: `url("/images/spy.webp")`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "left",
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -20,8 +20,8 @@ export const Banner = () => {
           <video src="/vidgif/video_1.mp4" autoPlay muted loop></video>
         </div>
         <div className="z-[888] max-w-[900px] mt-12 px-20 py-24 tablet:px-12 visible phone:hidden">
-          <h1 className="mb-6 text-[4em] font-AmsterdamOne font-normal text-[#34173c]">
-            Manish <span className="text-[#01bf71]"> yadav</span>
+          <h1 className="mb-6 text-[4em] font- font-normal text-[#34173c]">
+            Manish <span className="text-[#01bf71]"> Yadav</span>
           </h1>
           {/* <div class="container">
               <div class="circles">
@@ -42,15 +42,11 @@ export const Banner = () => {
             </div> */}
           <div class="relative h-[230px] w-[500px] mb-10 rounded-[25px] bg-[#ffffff33] backdrop-sepia-0 border border-[#ffffff1a] shadow-xl shadow-[#00000033] overflow-hidden">
             <div class="absolute h-[700px] w-[500px] rounded-full bg-transparent border-[50px] border-[#ffffff1a] b-[-250px] r-[-250px] box-border after:content-[''] after:absolute after:h-[600px] after:w-[600px] after:rounded-full after:bg-transparent after:border-[30px] after:border-[#ffffff1a] after:b-[-80px] after:r-[-80px] after:box-border"></div>
-            <p
-              className="absolute w-[450px] h-full p-8 flex text-[20px] font-normal"
-              style={{ color: "#051A28" }}
-            >
-              <span className="text"></span> This is a a project collections of
-              a Javascript developer based out of Mumbai. Explore real world
-              projects including few things that he is most passionate about. He
-              believes in supremacy of having multiple solutions for a
-              particular problem.
+            <p className="absolute w-[450px] h-full p-8 flex text-xl font-normal text-blueDark1">
+              This is a a project collections of a Javascript developer based
+              out of Mumbai. Explore real world projects including few things
+              that he is most passionate about. He believes in supremacy of
+              having multiple solutions for a particular problem.
             </p>
           </div>
 

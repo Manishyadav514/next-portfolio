@@ -49,13 +49,13 @@ const Blog = (props) => {
                 </div>
               );
             })} */}
-            <div className="p-4 pt-20 bg-[#1F2937] rounded grid grid-cols-1 gap-5 laptop:grid-cols-4 tablet:grid-cols-2">
+            <div className="p-4 pt-20 bg-aquaLight2 border border-aquaLight3 shadow-xl rounded grid grid-cols-1 gap-5 laptop:grid-cols-4 tablet:grid-cols-2">
               {blogs.map((blogItem) => {
                 return (
                   <>
                     <article
                       key={blogItem.slug}
-                      className="flex flex-col bg-gray-900"
+                      className="flex flex-col bg-white border border-aquaLight3 shadow-md text-aquaDark1"
                     >
                       <div
                         className="relative flex items-end justify-start w-full text-left bg-center bg-cover h-64 dark:bg-gray-500"

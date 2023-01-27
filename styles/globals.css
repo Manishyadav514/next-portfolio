@@ -1,12 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Great+Vibes&family=Square+Peg&display=swap");
-/* font-family: 'Parisienne', cursive; */
-/* @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap'); */
+/* Google Fonts
+
+1. font-family: 'Great Vibes', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+3. font-family: 'Fredericka the Great', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+4. font-family: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+5. font-family: 'Playfair Display', serif;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+*/
+
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Amstrdem Font from ttf file */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+/* AmsterdamOne Font from ttf file */
 @font-face {
   font-family: "AmsterdamOne";
   src: url("../public/font/AmsterdamOne.ttf");
@@ -19,8 +36,10 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Playfair Display", serif;
-  /* background: #164e63; */
+  font-family: "Playfair Display", italic;
+  /* font-weight: 400; */
+  font-size: 16px;
+  background: #ffffff;
 }
 
 a {
@@ -35,6 +54,6 @@ ul {
 
 * {
   margin: 0;
-  padding: 0;
+  padding: #187598;
   box-sizing: border-box;
 }

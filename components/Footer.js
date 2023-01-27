@@ -27,7 +27,7 @@ export const LinkComp = ({ linkHref, linkText, newPageOpen }) => {
 const Footer = () => {
   return (
     <footer>
-      <div className="text-grey-100 bg-073d52 ">
+      <div className=" bg-aquaDark1 ">
         <div className="max-w-[1300px] px-5 py-16 mx-auto flex flex-row  flex-nowrap phone:flex-col items-start tablet:items-center  tablet:flex-col tablet:flex-nowrap laptop:items-center desktop:w-3/4 ">
           <div className="w-64 flex-shrink-0 flex-col tablet:mx-0 mx-auto text-center tablet:text-left">
             <a className="flex title-font font-medium items-center tablet:justify-start justify-center text-gray-100">
