@@ -6,7 +6,6 @@ import Features from "../components/Features";
 import SectionWrapper, { HomeCard } from "../components/SectionWrapper";
 import { SectionWrapperData } from "../data/HomeCardData.tsx";
 import { ThankYou } from "../components/ThankYou";
-// import {HomeCard} from "../components/HomeCard"
 
 export default function Home() {
   SectionWrapperData.map((item) => console.log(item.title));
@@ -85,7 +84,12 @@ export default function Home() {
           imageFront={SectionWrapperData[5].imageFirst}
         />
         <Contact />
-        <ThankYou />
+        <ThankYou
+          labelPrimary="Thanks"
+          labelSub="For"
+          labelSecondry="making this far"
+          imagedata={{ src: "/images/anya.png", height: 100, width: 100 }}
+        />
       </div>
     </>
   );

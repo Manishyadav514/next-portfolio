@@ -58,13 +58,7 @@
 }
 .navbar_link a {
   position: relative;
-  color: #fff;
-  font-size: 1em;
-  font-weight: 500;
-  text-decoration: none;
-  margin-left: 30px;
   transition: 0.3s ease;
-  padding-bottom: 10px;
 }
 .navbar_link a:before {
   content: "";
@@ -75,9 +69,6 @@
   bottom: 0;
   left: 0;
   transition: 0.3s ease;
-}
-.navbar_link a:hover {
-  color: orange;
 }
 .navbar_links .navbar_link a:hover:before {
   width: 100%;

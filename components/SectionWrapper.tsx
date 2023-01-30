@@ -31,12 +31,14 @@ const SectionWrapper = ({
   const bannerSvgUrl = `${
     bannerSVG.banner
       ? `url(${bannerSVG.banner})`
-      : `url("data:image/svg+xml,${svgString}")`
+      : bannerSVG.primaryColor
+      ? `url("data:image/svg+xml,${svgString}")`
+      : ""
   }`;
 
   return (
     <div
-      className={`min-h-screen bg-aquaDark1 w-full flex justify-center items-center px-16 phone:p-4 
+      className={`relative overflow-hidden min-h-screen bg-aquaDark1 w-full flex justify-center items-center px-16 phone:p-4 
        `}
       style={{
         // backgroundImage: `url(${bannerSVG.banner})`,
@@ -47,8 +49,11 @@ const SectionWrapper = ({
         backgroundRepeat: "no-repeat",
       }}
     >
+      {!bannerSVG.banner && !bannerSVG.primaryColor && (
+        <div className="z-0 absolute w-full h-full rotate-[197deg] -right-[50%] -top-[80%] phone:-top-[90%] scale-[2] bg-aquaDark2 bg-cover"></div>
+      )}
       <div
-        className={`flex  w-11/12 phone:w-full 
+        className={`z-10 flex w-11/12 phone:w-full 
         ${
           imageFront
             ? "flex-row-reverse tablet:flex-col-reverse phone:flex-col-reverse"

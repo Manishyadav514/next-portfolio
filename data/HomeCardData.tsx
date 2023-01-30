@@ -5,7 +5,7 @@ interface SectionWrapper {
   imageFirst: boolean;
   mockupImg: string;
   bannerSVG: {
-    banner: string;
+    banner?: string;
     primaryColor?: string;
     secondryColor?: string;
     rotate?: number;
@@ -91,9 +91,9 @@ export const SectionWrapperData: Array<SectionWrapper> = [
     dark: true,
     mockupImg: "/svg/m-car.svg",
     bannerSVG: {
-      banner: "/svg/bgb-tilt.svg",
-      primaryColor: "#012233",
-      secondryColor: "#051A28",
+      // banner: "/svg/bgb-diagonal.svg",
+      // primaryColor: "#012233",
+      // secondryColor: "#051A28",
     },
     links: [
       {
@@ -118,7 +118,7 @@ export const SectionWrapperData: Array<SectionWrapper> = [
     dark: true,
     mockupImg: "images/anime-girl.png",
     bannerSVG: {
-      banner: "/svg/wave.svg",
+      banner: "/svg/motion-wave.svg",
       primaryColor: "#012233",
       secondryColor: "#051A28",
     },
@@ -139,9 +139,6 @@ export const SectionWrapperData: Array<SectionWrapper> = [
     mockupImg: "/svg/m-camera.svg",
     dark: true,
     bannerSVG: {
-      banner: "/svg/diagonal.svg",
-      primaryColor: "#012233",
-      secondryColor: "#051A28",
     },
     links: [
       {

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { ThankYou } from "../../components/ThankYou";
+import { NoData } from "../../components/NoData";
 // import InfiniteScroll from 'react-infinite-scroll-component';
 
 const Poem = (props) => {
@@ -19,9 +21,15 @@ const Poem = (props) => {
 
   return (
     <div className="">
+      <ThankYou
+        labelPrimary="Welcome"
+        labelSub="to"
+        labelSecondry="my poem section"
+        imagedata={{ src: "/svg/i-books.svg", height: 600, width: 600 }}
+      />
       <main className="">
         {!poems ? (
-          <>No Poem Found</>
+          <NoData />
         ) : (
           <>
             {poems?.map((poem) => {

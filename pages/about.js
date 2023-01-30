@@ -2,10 +2,9 @@ import React from "react";
 import styles from "../styles/about.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import Contact from "../components/Contact";
 
 const about = () => {
   return (
@@ -99,7 +98,7 @@ const about = () => {
           objectFit="cover"
         /> */}
       </div>
-      <Contact />
+      {/* <Contact /> */}
     </>
   );
 };

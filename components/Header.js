@@ -61,19 +61,19 @@ export const Header1 = () => {
       }`}
       id="navbar"
     >
-      <div className="flex align-middle items-center justify-center p-2">
-        {/* <Image
-          width={128}
-          height={64}
-          src={"images/logo.jpg"}
+      <div className="flex align-middle items-center justify-center">
+        <Image
+          width={120}
+          height={50}
+          src={"logo/dearsenpai.webp"}
           alt="logo"
           priority
-        /> */}
-        <Link href="/">
-          <a className="text-base font-medium hover:text-whiteBlue font-AmsterdamOne">
+        />
+        {/* <Link href="/">
+          <a className="text-base font-medium font-AmsterdamOne hover:text-pink-500">
             Dear Senpai
           </a>
-        </Link>
+        </Link> */}
       </div>
       {/* <a className="relative text-white text-lg font-normal transition ease-in-out before:content[''] before:absolute before:bg-cyan-800 before:w-0 before:h-[3px] before:bottom-0 before:left-0 before:transition before:ease-in-out hover:text-cyan-400 hover:before:w-full ">
         manish
@@ -84,24 +84,23 @@ export const Header1 = () => {
       >
         <FaBars className="text-white text-[26px]" />
       </div>
-      <div className={styles.navbar_links}>
-        <div className={styles.navbar_link}>
+      <div
+        className={`text-[1em] font-medium ${
+          homePath ? "text-black" : "text-white"
+        } ${styles.navbar_links}`}
+      >
+        <div className={` ${styles.navbar_link}`}>
           <Link href="/">
-            <a>Home</a>
+            <a className="hover:text-pink-500 pb-2 ml-[30px]">Home</a>
           </Link>
           <Link href="/poem">
-            <a className={`${currentPath === "/poem" && ""}`}>
-              Alfaaz-e-Sukhan
-            </a>
+            <a className={`hover:text-pink-500 pb-2 ml-[30px]`}>Alfaaz-e-Sukhan</a>
           </Link>
           <Link href="/photography">
-            <a>Photography</a>
+            <a className="hover:text-pink-500 pb-2 ml-[30px]">Photography</a>
           </Link>
           <Link href="/about">
-            <a>About</a>
-          </Link>
-          <Link href="/contact">
-            <a>Contact</a>
+            <a className="hover:text-pink-500 pb-2 ml-[30px]">About</a>
           </Link>
         </div>
       </div>
@@ -129,9 +128,6 @@ export const Header1 = () => {
           </Link>
           <Link href="/photography">
             <a>Photo</a>
-          </Link>
-          <Link href="/contact">
-            <a>Contact</a>
           </Link>
           <div>
             <ButtonBW label="Sign In" darkButton={false} />

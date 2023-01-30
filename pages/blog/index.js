@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 // import InfiniteScroll from 'react-infinite-scroll-component';
+import { NoData } from "../../components/NoData";
 
 const Blog = (props) => {
   // const [count, setCount] = useState(2);
@@ -20,7 +21,7 @@ const Blog = (props) => {
     <>
       <div className="max-w-screen-xl p-20 phone:p-4 mx-auto bg-transparent text-gray-100">
         {!blogs ? (
-          <>No Blog Found</>
+          <NoData />
         ) : (
           <>
             {/* <InfiniteScroll
