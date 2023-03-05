@@ -23,25 +23,25 @@ export const Banner = () => {
           <h1 className="mb-6 text-[4em] font- font-normal text-[#34173c]">
             Manish <span className="text-[#01bf71]"> Yadav</span>
           </h1>
-          {/* <div class="container">
-              <div class="circles">
-                <div class="circle circle-1"></div>
-                <div class="circle circle-2"></div>
+          {/* <div className="container">
+              <div className="circles">
+                <div className="circle circle-1"></div>
+                <div className="circle circle-2"></div>
               </div>
 
-              <div class="card-group">
-                <div class="card">
-                  <div class="ring"></div>
+              <div className="card-group">
+                <div className="card">
+                  <div className="ring"></div>
                 </div>
               </div>
             </div> */}
-          {/* <div class="absolute t-1/2 l-1/2 translate-x--1/2 translate-y--1/2">
-              <div class="relative h-[270px] w-[450px] rounded-[25px] bg-[#ffffff33] backdrop-sepia-0 border border-[#ffffff1a] shadow-xl shadow-[#00000033] overflow-hidden">
-                <div class="absolute h-[500px] w-[500px] rounded-full bg-transparent border-[50px] border-[#ffffff1a] b-[-250px] r-[-250px] box-border after:content-[''] after:absolute after:h-[600px] after:w-[600px] after:rounded-full after:bg-transparent after:border-[30px] after:border-[#ffffff1a] after:b-[-80px] after:r-[-80px] after:box-border"></div>
+          {/* <div className="absolute t-1/2 l-1/2 translate-x--1/2 translate-y--1/2">
+              <div className="relative h-[270px] w-[450px] rounded-[25px] bg-[#ffffff33] backdrop-sepia-0 border border-[#ffffff1a] shadow-xl shadow-[#00000033] overflow-hidden">
+                <div className="absolute h-[500px] w-[500px] rounded-full bg-transparent border-[50px] border-[#ffffff1a] b-[-250px] r-[-250px] box-border after:content-[''] after:absolute after:h-[600px] after:w-[600px] after:rounded-full after:bg-transparent after:border-[30px] after:border-[#ffffff1a] after:b-[-80px] after:r-[-80px] after:box-border"></div>
               </div>
             </div> */}
-          <div class="relative h-[230px] w-[500px] mb-10 rounded-[25px] bg-[#ffffff33] backdrop-sepia-0 border border-[#ffffff1a] shadow-xl shadow-[#00000033] overflow-hidden">
-            <div class="absolute h-[700px] w-[500px] rounded-full bg-transparent border-[50px] border-[#ffffff1a] b-[-250px] r-[-250px] box-border after:content-[''] after:absolute after:h-[600px] after:w-[600px] after:rounded-full after:bg-transparent after:border-[30px] after:border-[#ffffff1a] after:b-[-80px] after:r-[-80px] after:box-border"></div>
+          <div className="relative h-[230px] w-[500px] mb-10 rounded-[25px] bg-[#ffffff33] backdrop-sepia-0 border border-[#ffffff1a] shadow-xl shadow-[#00000033] overflow-hidden">
+            <div className="absolute h-[700px] w-[500px] rounded-full bg-transparent border-[50px] border-[#ffffff1a] b-[-250px] r-[-250px] box-border after:content-[''] after:absolute after:h-[600px] after:w-[600px] after:rounded-full after:bg-transparent after:border-[30px] after:border-[#ffffff1a] after:b-[-80px] after:r-[-80px] after:box-border"></div>
             <p className="absolute w-[450px] h-full p-8 flex text-xl font-normal text-blueDark1">
               This is a a project collections of a Javascript developer based
               out of Mumbai. Explore real world projects including few things

@@ -41,19 +41,19 @@ module.exports = {
         aquaDark1: "#073d52",
         // cream
         // white
-        whiteAqua:"#deebec",
-        whiteBlue:"#E1EFF5",
+        whiteAqua: "#deebec",
+        whiteBlue: "#E1EFF5",
       },
       fontFamily: {
         AmsterdamOne: "AmsterdamOne",
         GreatVibes: `'Great Vibes', cursive;`,
       },
-    },
-    screens: {
-      phone: { min: "1px", max: "550px" },
-      tablet: { min: "550px", max: "1080px" },
-      laptop: { min: "1081px", max: "1920px" },
-      desktop: { min: "1921px" },
+      screens: {
+        phone: { min: "1px", max: "550px" },
+        tablet: { min: "550px", max: "1080px" },
+        laptop: { min: "1081px", max: "1920px" },
+        desktop: { min: "1921px" },
+      },
     },
   },
   plugins: [],

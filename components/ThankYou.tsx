@@ -15,13 +15,13 @@ export const ThankYou = ({
   imagedata,
 }: ThankYouProps) => {
   return (
-    <div className=" w-full p-16 phone:p-8 text-aquaLight1 bg-aquaDark2 bg- flex flex-row gap-16 phone:gap-4 phone:flex-col justify-center items-center align-middle text-center">
+    <div className=" w-full lg:p-16 p-8 text-aquaLight1 bg-aquaDark2 bg- flex lg:flex-row lg:gap-16 gap-4 flex-col justify-center items-center align-middle text-center">
       <div className="">
-        <h1 className="font-bold  text-5xl phone:text-4xl minmd:text-6xl minlg:text-8xl leading-12 minmd:leading-13">
+        <h1 className="font-bold  lg:text-5xl text-4xl leading-12">
           {labelPrimary}
           <span className="text-aquaBright4"> {labelSub}</span>
         </h1>
-        <p className="my-5 minmd:my-10  font-light text-xl minmd:text-3xl minlg:text-4xl minmd:leading-16 ">
+        <p className="my-5 md:my-10  font-light text-xl md:text-3xl minlg:text-4xl md:leading-16 ">
           {labelSecondry}
         </p>
       </div>
