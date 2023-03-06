@@ -49,9 +49,7 @@ const Features = ({ dark }: FeaturesProps) => {
     >
       <div className="flex items-center w-full flex-col text-center">
         <div className="p-16">
-          <h1 className="font-bold text-6xl phone:text-4xl leading-12 ">
-            Skills
-          </h1>
+          <h1 className="font-bold md:text-6xl text-4xl leading-12 ">Skills</h1>
           <p className="my-5 font-light text-xl">
             Have been working as a React and Next developer for a year and half.
             Here are the skill sets that I have been continuously mastering.
@@ -98,20 +96,20 @@ const Features = ({ dark }: FeaturesProps) => {
 export const SkillCard = ({ iconUrl, iconText, level, dark }) => (
   <div
     key={iconText}
-    className={`relative shadow-xl rounded p-6 m-8 flex justify-around items-center flex-col hover:shadow-lg cursor-pointer w-40 h-40  ${
+    className={`relative shadow-xl m-2 rounded-full md:rounded p-6 md:m-8 flex justify-around items-center flex-col hover:shadow-lg cursor-pointer w-40 h-40  ${
       !dark
         ? "bg-blueBright2 text-white  hover:bg-aquaDark4"
         : "bg-aquaLight1 text-black hover:bg-slate-200"
-    } phone:m-2 phone:rounded-full `}
+    }`}
   >
     <div
-      className={`absolute w-[105%] h-[105%] rounded border-[15px] border-black ${styles.borderAnimation} phone:border-[12px] phone:rounded-full`}
+      className={`absolute w-[105%] h-[105%] md:rounded border-[12px] rounded-full md:border-[15px] border-black ${styles.borderAnimation} `}
     ></div>
     <Image src={iconUrl} alt={iconText} height={50} width={50} />
     <p className="py-2 font-semibold text-base text-tertiary">{iconText}</p>
-    <div className="h-4 phone:h-2 w-[100px] mb-3 bg-gray-300 rounded-full">
+    <div className="md:h-4 h-2 w-[100px] mb-3 bg-gray-300 rounded-full">
       <div
-        className="h-4 phone:h-2 bg-blue-600 rounded-full dark:bg-blue-500"
+        className="md:h-4 h-2 bg-blue-600 rounded-full dark:bg-blue-500"
         style={{ width: level }}
       ></div>
     </div>

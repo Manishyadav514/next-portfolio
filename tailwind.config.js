@@ -48,12 +48,6 @@ module.exports = {
         AmsterdamOne: "AmsterdamOne",
         GreatVibes: `'Great Vibes', cursive;`,
       },
-      screens: {
-        phone: { min: "1px", max: "550px" },
-        tablet: { min: "550px", max: "1080px" },
-        laptop: { min: "1081px", max: "1920px" },
-        desktop: { min: "1921px" },
-      },
     },
   },
   plugins: [],

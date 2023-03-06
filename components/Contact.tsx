@@ -14,7 +14,7 @@ const Contact = () => {
       }}
     >
       {/* Image */}
-      {/* <div className="phone:hidden absolute w-full h-full flex justify-end align-center items-center overflow-hidden">
+      {/* <div className="hidden absolute w-full h-full flex justify-end align-center items-center overflow-hidden">
         <span className="mr-[-13px]">
           <Image
             width={200}
@@ -25,16 +25,16 @@ const Contact = () => {
         </span>
       </div> */}
       {/* Text and Form Content */}
-      <div className="w-full h-full py-[100px] flex tablet:flex-col phone:flex-col justify-center text-white">
-        <div className="w-full h-full pl-24 flex phone:px-4 tablet:px-8 phone:justify-center tablet:justify-center justify-start align-center items-center overflow-hidden">
-          <h2 className="text-4xl phone:text-3xl font-medium text-white font-serif">
+      <div className="w-full h-full py-[100px] flex lg:flex-row flex-col justify-center text-white">
+        <div className="w-full h-full pl-24 flex px-4 md:px-8 justify-center md:justify-center md:justify-start align-center items-center overflow-hidden">
+          <h2 className="md:text-4xl text-3xl font-medium text-white font-serif">
             Do you have something in mind? <br></br>I would love to hear it.
           </h2>
         </div>
         {/* Form */}
         <div className="w-full h-full flex justify-center items-center">
-          <div className="flex flex-row phone:flex-col bg-[#fffeff] border rounded-lg ">
-            <div className="phone:hidden h-full bg-pink-500 overflow-hidden rounded-lg">
+          <div className="flex md:flex-row flex-col bg-[#fffeff] border rounded-lg ">
+            <div className="hidden md:block h-full bg-pink-500 overflow-hidden rounded-lg">
               <Image
                 width={200}
                 height={200}

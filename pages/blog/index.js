@@ -19,7 +19,7 @@ const Blog = (props) => {
 
   return (
     <>
-      <div className="max-w-screen-xl p-20 phone:p-4 mx-auto bg-transparent text-gray-100">
+      <div className="max-w-screen-xl md:p-20 p-4 mx-auto bg-transparent text-gray-100">
         {!blogs ? (
           <NoData />
         ) : (
@@ -50,7 +50,7 @@ const Blog = (props) => {
                 </div>
               );
             })} */}
-            <div className="p-4 pt-20 bg-aquaLight2 border border-aquaLight3 shadow-xl rounded grid grid-cols-1 gap-5 laptop:grid-cols-4 tablet:grid-cols-2">
+            <div className="p-4 pt-20 bg-aquaLight2 border border-aquaLight3 shadow-xl rounded grid grid-cols-1 gap-5 laptop:grid-cols-4 md:grid-cols-2">
               {blogs.map((blogItem) => {
                 return (
                   <>

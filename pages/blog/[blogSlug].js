@@ -28,15 +28,15 @@ const Slug = (props) => {
             <Link href="/blog">&#8592; Back</Link>
           </span>
         </div>
-        <div className="bg-aquaDark2 text-aquaLight1 px-[2rem] absolute top-[200px] left-[100px] tablet:left-12 phone:left-8">
-          <h3 className="text-7xl font-GreatVibes phone:text-3xl font-bold leading-none flex-1 py-2">
+        <div className="bg-aquaDark2 text-aquaLight1 px-[2rem] absolute top-[200px] md:left-[100px] md:left-12 left-8">
+          <h3 className="md:text-7xl font-GreatVibes text-3xl font-bold leading-none flex-1 py-2">
             {blog?.title}
           </h3>
         </div>
       </div>
-      {/* <img src="https://source.unsplash.com/random/480x360" alt="" className="w-full h-60 phone:h-96 bg-gray-500" ></img> */}
+      {/* <img src="https://source.unsplash.com/random/480x360" alt="" className="w-full h-60 h-96 bg-gray-500" ></img> */}
       <div className="">
-        <article className="bg-white text-aquaDark1 border border-aquaLight2 shadow-lg mb-32 max-w-7xl flex flex-col overflow-hidden rounded relative w-11/12 px-10 phone:px-4 tablet:px-6 -mt-[100px]   text-aqua1  py-24 mx-auto space-y-16">
+        <article className="bg-white text-aquaDark1 border border-aquaLight2 shadow-lg mb-32 max-w-7xl flex flex-col overflow-hidden rounded relative w-11/12 md:px-10 px-4 md:px-6 -mt-[100px]   text-aqua1  py-24 mx-auto space-y-16">
           <div className="w-full mx-auto space-y-4">
             <div className="flex justify-between">
               <h1 className="text-2xl font-bold leading-none">
@@ -52,7 +52,7 @@ const Slug = (props) => {
               <span>#Angular</span>
             </div>
           </div>
-          <div className="text-xl tablet:text-lg phone:text-base font-normal leading-10 tracking-normal">
+          <div className="md:text-xl md:text-lg text-base font-normal leading-10 tracking-normal">
             {blog && (
               <div dangerouslySetInnerHTML={createMarkup(blog.content)}></div>
             )}
