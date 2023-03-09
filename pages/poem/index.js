@@ -2,22 +2,28 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { ThankYou } from "../../components/ThankYou";
 import { NoData } from "../../components/NoData";
+import { PoemData } from "../../data/Data";
 // import InfiniteScroll from 'react-infinite-scroll-component';
 
 const Poem = (props) => {
   // const [poems, setPoem] = useState(props.PoemData);
-  const [poems, setPoem] = useState();
+
+  const [poems, setPoem] = useState([]);
   const fetchPoemData = async () => {
-    let res = await fetch(`http://localhost:3000/api/poemAPI`);
-    const PoemData = await res.json();
-    console.log(PoemData);
-    setPoem(PoemData);
-    // return PoemData;
+    try {
+      let res = await fetch(`http://localhost:3000/api/poemAPI`);
+      const PoemData = await res.json();
+      setPoem(PoemData);
+    } catch (e) {
+      console.error("Something went wrong------------", "\n", e);
+    } finally {
+      poems?.length === 0 && setPoem(PoemData);
+    }
   };
 
   useEffect(() => {
     fetchPoemData();
-  }, []);
+  });
 
   return (
     <div className="">
@@ -28,7 +34,7 @@ const Poem = (props) => {
         imagedata={{ src: "/svg/i-books.svg", height: 600, width: 600 }}
       />
       <main className="">
-        {!poems ? (
+        {!poems?.length > 0 ? (
           <NoData />
         ) : (
           <>

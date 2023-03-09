@@ -2,20 +2,26 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 // import InfiniteScroll from 'react-infinite-scroll-component';
 import { NoData } from "../../components/NoData";
+import { BlogData } from "../../data/Data";
 
 const Blog = (props) => {
   // const [count, setCount] = useState(2);
-
-  const [blogs, setBlog] = useState();
+  const [blogs, setBlog] = useState([]);
   const fetchBlogData = async () => {
-    let res = await fetch(`http://localhost:3000/api/blogAPI`);
-    const BlogData = await res.json();
-    setBlog(BlogData);
+    try {
+      let res = await fetch(`http://localhost:3000/api/blogAPI`);
+      const BlogData = await res.json();
+      setBlog(BlogData);
+    } catch (e) {
+      console.error("Something went wrong------------", "\n", e);
+    } finally {
+      blogs?.length === 0 && setBlog(BlogData);
+    }
   };
 
   useEffect(() => {
     fetchBlogData();
-  }, []);
+  });
 
   return (
     <>
@@ -55,7 +61,7 @@ const Blog = (props) => {
                 return (
                   <>
                     <article
-                      key={blogItem.slug}
+                      key={blogItem?.slug}
                       className="flex flex-col bg-white border border-aquaLight3 shadow-md text-aquaDark1"
                     >
                       <div
@@ -92,7 +98,7 @@ const Blog = (props) => {
                             href="#"
                             className="font-medium text-lg hover:underline text-gray-100"
                           >
-                            {blogItem.title}
+                            {blogItem?.title}
                           </a>
                         </h2> */}
                       </div>
@@ -100,7 +106,7 @@ const Blog = (props) => {
                         <div>
                           {" "}
                           <h3 className="flex-1 py-2 text-lg font-semibold leading-snug">
-                            {blogItem.title}
+                            {blogItem?.title}
                           </h3>
                           <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs dark:text-gray-400">
                             <span>by Manish Y.</span>
