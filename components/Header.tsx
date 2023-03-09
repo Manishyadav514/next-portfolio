@@ -62,7 +62,7 @@ export const Header1 = () => {
       id="navbar"
     >
       <div className="flex align-middle items-center justify-center">
-        <Link href="/">
+        <Link legacyBehavior href="/">
           <Image
             width={120}
             height={50}
@@ -100,7 +100,7 @@ export const Header1 = () => {
       >
         <div className={` ${styles.navbar_link}`}>
           {menuLink.map((item: any) => (
-            <Link key={item.label} href={item.slug}>
+            <Link legacyBehavior key={item.label} href={item.slug}>
               <a className="hover:text-pink-500 pb-2 ml-[30px]">
                 {item.label}
                 {/* {item?.child?.length > 0 && (

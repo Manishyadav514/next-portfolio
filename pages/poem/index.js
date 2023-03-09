@@ -35,9 +35,7 @@ const Poem = (props) => {
             {poems?.map((poem) => {
               return (
                 <div key={poem?.title}>
-                  <Link href={`/poem/${poem?.slug}`}>
-                    <button className="">{poem?.title}</button>
-                  </Link>
+                  <Link href={`/poem/${poem?.slug}`}>{poem?.title}</Link>
                 </div>
               );
             })}

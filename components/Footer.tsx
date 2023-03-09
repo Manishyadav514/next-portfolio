@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="max-w-[1300px] px-5 py-16 mx-auto flex lg:flex-row flex-nowrap flex-col lg:items-start md:flex-nowrap items-center lg:w-3/4 ">
           <div className="flex  text-center md:text-left">
             <div className="flex font-medium items-center  justify-center text-gray-100">
-              <Link href="/">
+              <Link legacyBehavior href="/">
                 <p className="ml-3 text-xl cursor-pointer">
                   Dear<span className="text-teal-200">Senpai</span>
                 </p>
@@ -68,7 +68,7 @@ const MenuLinks = ({
       <nav className="list-none mb-10">
         {child.map((subChild: any, index: number) => (
           <div key={`${subChild.label}-${index}`}>
-            <Link href={subChild.slug} legacyBehavior>
+            <Link legacyBehavior href={subChild.slug}>
               {subChild?.newPageOpen ? (
                 <a
                   target="_blank"

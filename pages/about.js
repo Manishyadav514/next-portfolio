@@ -31,19 +31,19 @@ const about = () => {
             <span> a Mumbai based Javascript developer</span>
           </h2>
           <div className={styles.social_links}>
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a target="_blank" rel="noopener noreferrer">
                 <FaFacebookMessenger
                   style={{ color: "#448AFF", borderRadius: 2 }}
                 />
               </a>
             </Link>
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a>
                 <HiOutlineMail style={{ color: "#EA4335" }} />
               </a>
             </Link>
-            <Link href="https://www.instagram.com/awareness_hall/">
+            <Link legacyBehavior href="https://www.instagram.com/awareness_hall/">
               <a target="_blank" rel="noopener noreferrer">
                 <BsInstagram style={{ color: "#DE6666" }} />
               </a>

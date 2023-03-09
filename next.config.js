@@ -8,9 +8,9 @@ const nextConfig = {
   //   loader: 'imgix',
   //   path: '/',
   // },
-  experimental: {
-    newNextLinkBehavior: false,
-  },
+  // experimental: {
+  //   newNextLinkBehavior: false,
+  // },
 };
 
 module.exports = nextConfig;

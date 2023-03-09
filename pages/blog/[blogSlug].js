@@ -25,7 +25,7 @@ const Slug = (props) => {
             Go
           </span>
           <span className="hover:text-aquaLight1 text-1xl font-bold leading-none uppercase">
-            <Link href="/blog">&#8592; Back</Link>
+            <Link legacyBehavior href="/blog">&#8592; Back</Link>
           </span>
         </div>
         <div className="bg-aquaDark2 text-aquaLight1 px-[2rem] absolute top-[200px] md:left-[100px] md:left-12 left-8">

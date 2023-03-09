@@ -89,7 +89,7 @@ const SectionWrapper = ({
                     imageFront ? "justify-end" : "justify-start"
                   }`}
                 >
-                  <Link href={links[0]?.direct}>
+                  <Link legacyBehavior href={links[0]?.direct}>
                     <a target="_blank" rel="noopener noreferrer">
                       <ButtonBW label={links[0]?.title} darkButton={!dark} />
                     </a>
@@ -105,7 +105,7 @@ const SectionWrapper = ({
                           imageFront ? "justify-end" : "justify-start"
                         }`}
                       >
-                        <Link href={link?.direct} passHref legacyBehavior>
+                        <Link legacyBehavior href={link?.direct} passHref>
                           <a
                             target="_blank"
                             rel="noopener noreferrer"
@@ -170,7 +170,7 @@ export const HomeCard = ({ props, dark, imageFront }) => {
           <>
             {props.links.length === 1 ? (
               <div className="flex items-start">
-                <Link href={props.links[0]?.direct}>
+                <Link legacyBehavior href={props.links[0]?.direct}>
                   <a target="_blank" rel="noopener noreferrer">
                     <ButtonBW
                       label={props.links[0]?.title}
@@ -183,7 +183,7 @@ export const HomeCard = ({ props, dark, imageFront }) => {
               <>
                 {props.links?.map((link) => (
                   <div key={link?.direct}>
-                    <Link href={link?.direct} passHref legacyBehavior>
+                    <Link legacyBehavior href={link?.direct} passHref>
                       <a
                         target="_blank"
                         rel="noopener noreferrer"

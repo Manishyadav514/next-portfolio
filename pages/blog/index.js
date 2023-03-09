@@ -38,13 +38,13 @@ const Blog = (props) => {
             {/* {blogs.map((blogItem) => {
               return (
                 <div key={blogItem?.slug}>
-                  <Link href={`/blogRouting/${blogItem?.slug}`}>
+                  <Link legacyBehavior href={`/blogRouting/${blogItem?.slug}`}>
                     <h3 className="">{blogItem?.title}</h3>
                   </Link>
                   <p className="">
                     {blogItem?.metadesc?.substr(0, 140)}...
                   </p>
-                  <Link href={`/blog/${blogItem?.slug}`}>
+                  <Link legacyBehavior href={`/blog/${blogItem?.slug}`}>
                     <button className="">Read More</button>
                   </Link>
                 </div>
@@ -74,7 +74,7 @@ const Blog = (props) => {
                         {blogItem?.title}
                       </a> */}
 
-                          <Link href={`/blog/${blogItem?.slug}`}>
+                          <Link legacyBehavior href={`/blog/${blogItem?.slug}`}>
                             <a className="px-3 py-2 text-xs font-semibold tracking-wider uppercase text-gray-100 bgundefined">
                               2.1K Views
                             </a>

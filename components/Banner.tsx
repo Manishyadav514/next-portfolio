@@ -32,7 +32,7 @@ export const Banner = () => {
             </p>
           </div>
           <div className="flex flex-row mt-3 gap-4">
-            <Link href="/about" legacyBehavior>
+            <Link legacyBehavior href="/about">
               <CommonButton
                 btnLabel="Read More"
                 customClass="px-[35px] py-[15px] bg-white text-[#1680ac] text-[17px] font-medium rounded-[2px] cursor-pointer hover:bg-[#1680ac] hover:text-white"
@@ -41,7 +41,7 @@ export const Banner = () => {
           </div>
         </div>
         <div className="z-[888] absolute right-5 flex flex-col gap-2 text-3xl">
-          <Link href="/" passHref legacyBehavior>
+          <Link legacyBehavior href="/" passHref>
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -50,7 +50,7 @@ export const Banner = () => {
               <FaFacebookMessenger style={{ color: "#448AFF" }} />
             </a>
           </Link>
-          <Link href="/" passHref legacyBehavior>
+          <Link legacyBehavior href="/" passHref>
             <a className="hover:scale-[1.3] transition ease-in cursor-pointer">
               <HiOutlineMail style={{ color: "#EA4335" }} />
             </a>
