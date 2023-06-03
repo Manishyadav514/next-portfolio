@@ -82,6 +82,7 @@ export const SectionWrapperData: Array<SectionWrapper> = [
       },
     ],
   },
+
   {
     topLine: "2021-2022",
     title: "React & Next Project",
@@ -131,6 +132,27 @@ export const SectionWrapperData: Array<SectionWrapper> = [
     ],
   },
   {
+    topLine: "React Website",
+    title: "Anime TV",
+    description:
+      "I am developing this website using React and Gogoanime API. It's still in a development phase and  currently uses dummy data on frontend.",
+    imageFirst: true,
+    dark: true,
+    mockupImg: "/images/animetv.png",
+    bannerSVG: {
+      // banner: "/svg/motion-downcurve.svg",
+      primaryColor: "#093D52",
+      secondryColor: "#00000",
+    },
+    links: [
+      {
+        id: 1,
+        title: "Visit AnimeTV",
+        direct: "https://next-website-animetv.vercel.app/",
+      },
+    ],
+  },
+  {
     topLine: "Click to CheckOut!",
     title: "Photography/Video",
     description:
@@ -138,8 +160,7 @@ export const SectionWrapperData: Array<SectionWrapper> = [
     imageFirst: true,
     mockupImg: "/svg/m-camera.svg",
     dark: true,
-    bannerSVG: {
-    },
+    bannerSVG: {},
     links: [
       {
         id: 1,

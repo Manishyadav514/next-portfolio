@@ -26,7 +26,7 @@ const Contact = () => {
       </div> */}
       {/* Text and Form Content */}
       <div className="w-full h-full py-[100px] flex lg:flex-row flex-col justify-center text-white">
-        <div className="w-full h-full pl-24 flex px-4 md:px-8 justify-center md:justify-center md:justify-start align-center items-center overflow-hidden">
+        <div className="w-full h-full md:pl-24 flex px-4 md:px-8 justify-center md:justify-center md:justify-start align-center items-center overflow-hidden">
           <h2 className="md:text-4xl text-3xl font-medium text-white font-serif">
             Do you have something in mind? <br></br>I would love to hear it.
           </h2>

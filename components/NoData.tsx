@@ -3,10 +3,10 @@ import Image from "next/image";
 import { BiError } from "react-icons/bi";
 
 interface NoDataProps {
-  labelPrimary: string;
-  labelSub: string;
-  labelSecondry: string;
-  imagedata: { src: string; width: number; height: number };
+  labelPrimary?: string;
+  labelSub?: string;
+  labelSecondry?: string;
+  imagedata?: { src: string; width: number; height: number };
 }
 
 export const NoData = ({
