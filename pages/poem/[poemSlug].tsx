@@ -517,11 +517,17 @@ export async function getStaticPaths() {
   data = await JSON.parse(data);
   // let res = await fetch(`http://localhost:3000/api/poemAPI`);
   // let data = await res.json();
-  data = data.map((item) => {
+  if (!Array.isArray(data)) {
+    return {
+      paths: [],
+      fallback: true,
+    };
+  }
+  const newData = data.map((item) => {
     return { params: { poemSlug: item.slug } };
   });
   return {
-    paths: data,
+    paths: newData,
     fallback: true,
   };
 }
@@ -534,8 +540,12 @@ export async function getStaticProps(context) {
   PoemData = JSON.parse(PoemData);
   // let res = await fetch(`http://localhost:3000/api/poemAPI`);
   // let PoemData = await res.json();
+  if (!Array.isArray(PoemData)) {
+    return {
+      props: {},
+    };
+  }
   let poem = PoemData.filter((b) => b.slug === poemSlug)[0];
-  console.log(poem);
   return {
     props: { poem }, // will be passed to the page component as props
   };
